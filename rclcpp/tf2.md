@@ -3,7 +3,7 @@
 The TF2 library provides easy access to transformations. All of the examples below
 require a dependency on the _tf2_ros_ package.
 
-Broadcasting a transform:
+## Broadcasting Transforms
 
 ```
 #include <tf2_ros/transform_broadcaster.h>
@@ -22,7 +22,7 @@ transform.child_frame_id = "base_link";
 broadcaster->sendTransform(transform);
 ```
 
-Creating a _TransformListener_:
+## Listening for Transforms
 
 ```
 #include "tf2_ros/transform_listener.h"
@@ -35,6 +35,8 @@ rclcpp::Node node("name_of_node");
 tf_buffer.reset(new tf2_ros::Buffer(node.get_clock()));
 tf_listener.reset(new tf2_ros::TransformListener(*tf_buffer_));
 ```
+
+## Applying Transforms
 
 TF2 can be extended by packages that provide implementations of _transform_.
 The _tf2_geometry_msgs package provides these for _geometry_msgs_. The example
@@ -63,6 +65,8 @@ transform to be available up to that amount of time:
 ```
 tf_buffer->transform(in, out, "target_frame", tf2::durationFromSec(1.0));
 ```
+
+## Get Latest Transform
 
 A common work flow is to get the "latest" transform. In ROS2, this can be
 accomplished using _tf2::TimePointZero_, but requires using _lookupTransform_
