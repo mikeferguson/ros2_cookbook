@@ -1,6 +1,6 @@
 # rclpy: Time
 
-To get the equivelant of rospy.Time.now(), you now need a ROS2 node:
+To get the equivalent of rospy.Time.now(), you now need a ROS2 node:
 
 ```
 import rclpy
@@ -8,9 +8,9 @@ from rclpy.node import Node
 
 class MyNode(Node):
 
-	def some_func(self):
-		t = self.get_clock().now()
-		msg.header.stamp = t.to_msg()
+    def some_func(self):
+        t = self.get_clock().now()
+        msg.header.stamp = t.to_msg()
 ```
 
 Converting from Duration to messages is common:
@@ -30,13 +30,13 @@ from rclpy.node import Node
 
 class MyNode(Node):
 
-	def __init__(self):
-		super().__init__("my_node")
+    def __init__(self):
+        super().__init__("my_node")
 
-		# Create a timer that fires every quarter second
-		timer_period = 0.25
-		self.timer = self.create_timer(timer_period, self.callback)
+        # Create a timer that fires every quarter second
+        timer_period = 0.25
+        self.timer = self.create_timer(timer_period, self.callback)
 
-	def callback(self):
-		self.get_logger().info("timer has fired")
+    def callback(self):
+        self.get_logger().info("timer has fired")
 ```
