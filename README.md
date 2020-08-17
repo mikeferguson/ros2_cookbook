@@ -2,11 +2,16 @@
 
  * Client Libraries
    * rclcpp [API](http://docs.ros2.org/latest/api/rclcpp/)
+     * Nodes and Components
+     * Parameters
+     * Logging
      * [Time](rclcpp/time.md)
      * [TF2](rclcpp/tf2.md)
+     * [Workarounds](rclcpp/workarounds.md)
    * rclpy [API](http://docs.ros2.org/latest/api/rclpy/)
      * [Nodes](rclpy/nodes.md)
      * [Time](rclpy/time.md)
+     * TF2
  * [ros2launch](launch.md)
  * Command Line Tools
    * ```ros2 node list```
