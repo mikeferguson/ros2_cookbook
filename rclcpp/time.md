@@ -6,25 +6,24 @@ their ROS1 equivalents, but are more closely related to
 
 When porting certain ROS1 libraries, there may be significant usage of
 timestamps as floating-point seconds. To get floating point seconds from
-an rclcpp::Time:
+an _rclcpp::Time_:
 
 ```
-double seconds = static_cast<double>(t.nanoseconds()) / 1e9;
+// node is instance of rclcpp::Node
+rclcpp::Time t = node.now();
+double seconds = t.seconds();
 ```
 
-Converting the opposite direction is equally easy:
+There is no constructor for Time from seconds, so you first need to convert
+to nanoseconds:
+
 ```
 rclcpp::Time t(static_cast<uin64_t>(seconds * 1e9));
 ```
 
-	Time t;
-	double seconds = t.seconds();  // since the epoch
+_rclcpp::Duration_ does have functions to go both directions:
 
-
-    Duration d = Duration::from_seconds(1.0);
-    double seconds = d.seconds();
-
-https://github.com/ros2/rclcpp/commit/0ccac1e3bd0f4314e11c86202c0c3ade57aed8ed#diff-ccbb86dadc423b17f11c0c3edbea8249 - was added here
-
-
-rclcpp::Node::now()
+```
+rclcpp::Duration d = rclcpp::Duration::from_seconds(1.0);
+double seconds = d.seconds();
+```
