@@ -2,7 +2,7 @@
 
 ## Creating a Component
 
-```
+```cpp
 #include <rclcpp/rclcpp.hpp>
 
 namespace my_pkg
@@ -48,7 +48,7 @@ rclcpp_components_register_node(my_component
 
 To run an executor in a thread:
 
-```
+```cpp
 #include <thread>
 #include <rclcpp/rclcpp.hpp>
 #include <rclcpp/executors/single_threaded_executor.hpp>

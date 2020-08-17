@@ -3,7 +3,7 @@
 Most nodes have publishers and subscribers, both of which are creating by
 calling functions of the _Node_ instance:
 
-```
+```python
 import rclpy
 from rclpy.node import Node
 

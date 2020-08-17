@@ -2,7 +2,7 @@
 
 To get the equivalent of rospy.Time.now(), you now need a ROS2 node:
 
-```
+```python
 import rclpy
 from rclpy.node import Node
 
@@ -15,7 +15,7 @@ class MyNode(Node):
 
 Converting from Duration to messages is common:
 
-```
+```python
 import rclpy
 from rclpy.duration import Duration
 
@@ -24,7 +24,7 @@ msg.duration = Duration(seconds=1).to_msg()
 
 Timers are created from the Node:
 
-```
+```python
 import rclpy
 from rclpy.node import Node
 

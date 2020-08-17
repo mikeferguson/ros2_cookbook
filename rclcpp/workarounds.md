@@ -6,7 +6,7 @@ ROS2 does not yet have subscriber connect callbacks. This code creates
 a function which is called periodically to check if we need to start
 or stop subscribers:
 
-```
+```cpp
 #include <rclcpp/rclcpp.hpp>
 #include <std_msgs/msg/float64.hpp>
 
@@ -44,7 +44,7 @@ The same can be done when using image transport, you simply
 have to change from _get_subscription_count_ to
 _getNumSubscribers_:
 
-```
+```cpp
 #include <rclcpp/rclcpp.hpp>
 #include <image_transport/image_transport.h>
 
