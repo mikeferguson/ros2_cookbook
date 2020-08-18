@@ -28,6 +28,6 @@ class MyNode(Node):
 if __name___ == "__main__":
     rclpy.init()
     my_node = MyNode()
-    rclpy.spin(ny_node)
+    rclpy.spin(my_node)
 ```
 
