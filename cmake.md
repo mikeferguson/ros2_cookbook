@@ -67,6 +67,18 @@ ament_export_dependencies(
 ament_package()
 ```
 
+## Linting Configuration
+
+I prefer a more ROS1-style code style. To allow braces to be on their
+own lines:
+
+```cmake
+if(BUILD_TESTING)
+  find_package(ament_cmake_cpplint)
+  ament_cpplint(FILTERS "-whitespace/braces" "-whitespace/newline")
+endif()
+```
+
 ## Depending on Messages in Same Package
 
 It is generally best practice to put messages in separate packages, but sometimes,
