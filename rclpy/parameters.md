@@ -48,3 +48,6 @@ class MyNode(Node):
         # Return success, so updates are seen via get_parameter()
         return result
 ```
+
+For an example of calling the set_parameters service, see
+[ROS Answers](https://answers.ros.org/question/308541/ros2-rclpy-set-parameter-example/)
