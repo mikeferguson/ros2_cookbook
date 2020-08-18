@@ -11,23 +11,23 @@ from std_msgs.msg import String
 
 class MyNode(Node):
 
-	def __init__(self):
-		super().__init__('my_node_name')
+    def __init__(self):
+        super().__init__('my_node_name')
 
-		self.publisher = self.create_publisher(String, 'output_topic', 10)
-		self.subscription = self.create_subscription(
-			String,
-			'input_topic',
-			self.callback,
-			10)
+        self.publisher = self.create_publisher(String, 'output_topic', 10)
+        self.subscription = self.create_subscription(
+            String,
+            'input_topic',
+            self.callback,
+            10)
 
-	def callback(self, msg):
-		self.get_logger().info("Recieved: %s" % msg.data)
-		self.publisher.publish(msg)
+    def callback(self, msg):
+        self.get_logger().info("Recieved: %s" % msg.data)
+        self.publisher.publish(msg)
 
 if __name___ == "__main__":
-	rclpy.init()
-	my_node = MyNode()
-	rclpy.spin(ny_node)
+    rclpy.init()
+    my_node = MyNode()
+    rclpy.spin(ny_node)
 ```
 
