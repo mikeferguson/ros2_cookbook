@@ -8,7 +8,7 @@
 namespace my_pkg
 {
 
-class MyComponent : rclcpp::Node
+class MyComponent : public rclcpp::Node
 {
 public:
   MyComponent(const rclcpp::NodeOptions& options)

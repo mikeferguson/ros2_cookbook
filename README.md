@@ -3,7 +3,7 @@
  * Client Libraries
    * rclcpp [API](http://docs.ros2.org/latest/api/rclcpp/)
      * [Nodes and Components](rclcpp/nodes.md)
-     * Parameters
+     * [Parameters](rclcpp/parameters.md)
      * Logging
      * [Time](rclcpp/time.md)
      * [TF2](rclcpp/tf2.md)
@@ -19,3 +19,4 @@
    * ```ros2 topic info <topic_name> --verbose``` gives details about QoS.
    * [colcon](cmdline/colcon.md) is the build tool.
    * ```ros2 doctor --report``` gives tons of information.
+* [CMake](cmake.md)
