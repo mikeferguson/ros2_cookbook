@@ -2,7 +2,7 @@
 
 The basic structure of an ament package:
 
-```
+```cmake
 cmake_minimum_required(VERSION 3.5)
 project(my_package_name)
 
@@ -72,7 +72,7 @@ ament_package()
 It is generally best practice to put messages in separate packages, but sometimes,
 especially for drivers, you want the messages in the same package.
 
-```
+```cmake
 find_package(rosidl_default_generators REQUIRED)
 
 # Generate some messages
@@ -87,7 +87,7 @@ rosidl_target_interfaces(my_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
 ## Building Python Extensions in C++
 
-```
+```cmake
 find_package(PythonLibs REQUIRED)
 find_package(Boost REQUIRED python)
 find_package(ament_cmake_python REQUIRED)
