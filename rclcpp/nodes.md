@@ -28,7 +28,7 @@ RCLCPP_COMPONENTS_REGISTER_NODE(my_pkg::MyComponent)
 
 The in the CMakeLists.txt:
 
-```
+```cmake
 add_library(my_component SHARED
   src/my_component.cpp
 )
