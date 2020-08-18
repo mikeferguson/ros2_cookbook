@@ -10,10 +10,21 @@ Build all packages:
 colcon build
 ```
 
-To avoid having to rebuild when tweaking Python scripts:
+To avoid having to rebuild when tweaking Python scripts,
+config files, and launch files:
 
 ```
 colcon build --symlink-install
+```
+
+To fix most build issues, especially if you have added or removed packages
+to your workspace or installed new RMW implementations, clean the CMake
+cache. See this
+[ROS Answers](https://answers.ros.org/question/333534/when-to-use-cmake-cleanconfigure/)
+post for more details.
+
+```
+colcon build --cmake-clean-cache
 ```
 
 ## Test
