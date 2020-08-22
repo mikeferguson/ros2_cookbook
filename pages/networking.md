@@ -18,7 +18,11 @@ nearly infinite partitioning of the network (see below).
 ## CycloneDDS
 
 Cyclone can be configured with XML. This can be stored in a file or passed
-directly in the environment variable CYCLONEDDS_URI.
+directly in the environment variable CYCLONEDDS_URI. A full list of
+supported options can be found in the
+[eclipse-cyclonedds repo](https://github.com/eclipse-cyclonedds/cyclonedds/blob/master/docs/manual/options.md).
+See also the
+[Guide to Configuration](https://github.com/eclipse-cyclonedds/cyclonedds/blob/master/docs/manual/config.rst).
 
 ### CycloneDDS: Multiple Interfaces
 
