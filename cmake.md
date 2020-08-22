@@ -97,6 +97,15 @@ add_executable(my_node my_node.cpp)
 rosidl_target_interfaces(my_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
 ```
 
+## Using Eigen3
+
+Add _eigen_ to your package.xml as a dependency, and then:
+
+```cmake
+find_package(Eigen3 REQUIRED)
+include_directories(${EIGEN3_INCLUDE_DIRS})
+```
+
 ## Building Python Extensions in C++
 
 The example below is based on the
