@@ -64,3 +64,24 @@ the network with a custom string:
   </Domain>
 </CycloneDDS>
 ```
+
+### Example
+
+The above tags can all be combined:
+
+```xml
+<CycloneDDS>
+  <Domain>
+    <General>
+      <!-- Explicitly set network interface -->
+      <NetworkInterfaceAddress>wlp2s0</NetworkInterfaceAddress>
+      <!-- Use multicast for discovery only -->
+      <AllowMulticast>spdp</AllowMulticast>
+    </General>
+    <Discovery>
+      <!-- This tag has to be the same on each machine -->
+      <Tag>my_robot_name</Tag>
+    </Discovery>
+  </Domain>
+</CycloneDDS>
+```
