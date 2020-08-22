@@ -13,11 +13,11 @@
      * [Parameters](rclpy/parameters.md)
      * [Time](rclpy/time.md)
      * [TF2](rclpy/tf2.md)
- * [ros2launch](launch.md)
+ * [ros2launch](pages/launch.md)
  * Command Line Tools
    * ```ros2 node list```
    * ```ros2 topic list```
    * ```ros2 topic info <topic_name> --verbose``` gives details about QoS.
-   * [colcon](cmdline/colcon.md) is the build tool.
+   * [colcon](pages/colcon.md) is the build tool.
    * ```ros2 doctor --report``` gives tons of information.
-* [CMake](cmake.md)
+* [CMake](pages/cmake.md)
