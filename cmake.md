@@ -99,6 +99,9 @@ rosidl_target_interfaces(my_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
 ## Building Python Extensions in C++
 
+The example below is based on the
+[etherbotix](https://github.com/mikeferguson/etherbotix) package.
+
 ```cmake
 find_package(PythonLibs REQUIRED)
 find_package(Boost REQUIRED python)
