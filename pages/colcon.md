@@ -27,6 +27,12 @@ post for more details.
 colcon build --cmake-clean-cache
 ```
 
+## CMake Arguments
+
+```
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo
+```
+
 ## Test
 
 To test and get results to screen:
