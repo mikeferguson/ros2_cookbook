@@ -24,6 +24,7 @@
    * [colcon](pages/colcon.md) is the build tool.
    * ```ros2 doctor --report``` gives tons of information.
 * [CMake](pages/cmake.md)
+* [Package Documentation](pages/packages.md)
 * Status Pages
   * [Foxy Debian Build Status](http://repo.ros2.org/status_page/ros_foxy_default.html)
   * [Rolling Debian Build Status](http://repo.ros2.org/status_page/ros_rolling_default.html)
