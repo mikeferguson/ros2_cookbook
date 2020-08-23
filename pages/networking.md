@@ -15,6 +15,9 @@ to use numbers less than 128.
 In addition to the ROS_DOMAIN_ID, CycloneDDS supports a domain tag, which allows
 nearly infinite partitioning of the network (see below).
 
+If you want to limit communication to the localhost set ROS_LOCALHOST_ONLY,
+which is [available since Eloquent](https://index.ros.org/doc/ros2/Releases/Release-Eloquent-Elusor/#new-features-in-this-ros-2-release).
+
 ## CycloneDDS
 
 Cyclone can be configured with XML. This can be stored in a file or passed
