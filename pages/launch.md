@@ -3,14 +3,14 @@
 ## Python-Based Launch Files
 
 Python-based launch files all pretty much follow the same structure.
-Note that prior to _Foxy_, the parameters name and executable were
-prefixed with node\_:
+Note that prior to _Foxy_, the parameters _name_, _namespace_, and _executable_ were
+[prefixed with node\_](https://index.ros.org/doc/ros2/Releases/Release-Foxy-Fitzroy/#launch-ros):
 
 ```python
 from launch import LaunchDescription
 from launch_ros.actions import Node
 
-def generate_laucnh_description():
+def generate_launch_description():
     return LaunchDescription([
         Node(
             name='node_runtime_name',
