@@ -130,3 +130,8 @@ Node(
     parameters=[{'robot_description': urdf}],
 )
 ```
+
+## Installing Launch Files
+
+ * [Python](https://index.ros.org/doc/ros2/Tutorials/Launch-system/#python-packages)
+ * [C++/CMake](https://index.ros.org/doc/ros2/Tutorials/Launch-system/#c-packages)

@@ -1,5 +1,17 @@
 # CMake
 
+While you don't need to know everything about CMake to use ROS2, knowing a bit
+will really be helpful. You might be interested in the
+[CMake tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
+which explains the basics of CMake.
+
+## Ament
+
+Ament is a set of CMake modules specifically designed for ROS2 with the intent
+of making CMake easier to use. See also the
+[Ament CMake](https://index.ros.org/doc/ros2/Tutorials/Ament-CMake-Documentation/)
+documentation.
+
 The basic structure of an ament package:
 
 ```cmake
