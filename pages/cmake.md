@@ -91,6 +91,17 @@ if(BUILD_TESTING)
 endif()
 ```
 
+## Installing Python Scripts
+
+```cmake
+install(
+  PROGRAMS
+    scripts/script1.py
+    scripts/script2.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+```
+
 ## Depending on Messages in Same Package
 
 It is generally best practice to put messages in separate packages, but sometimes,
