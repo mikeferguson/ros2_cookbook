@@ -2,6 +2,19 @@
 
 ROS2 uses DDS for message transport.
 
+Set the environment variable RMW_IMPLEMENTATION to select a DDS implementation
+(RMW = robotic middleware). For instance:
+
+```
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+```
+
+To check which RMW implementation is being used:
+
+```
+ros2 doctor --report | grep middleware
+```
+
 ## DDS Discovery
 
 There is no _rosmaster_ like in ROS1. Node discovery is peer-to-peer with nodes
