@@ -4,7 +4,7 @@
    * rclcpp [API](http://docs.ros2.org/latest/api/rclcpp/)
      * [Nodes and Components](rclcpp/nodes.md)
      * [Parameters](rclcpp/parameters.md)
-     * Logging
+     * [Point Clouds](rclcpp/pcl.md)
      * [Time](rclcpp/time.md)
      * [TF2](rclcpp/tf2.md)
      * [Workarounds](rclcpp/workarounds.md)
