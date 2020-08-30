@@ -29,5 +29,23 @@ if __name___ == "__main__":
     rclpy.init()
     my_node = MyNode()
     rclpy.spin(my_node)
+    my_node.destroy_node()  # cleans up pub-subs, etc
+    rclpy.shutdown()
 ```
 
+## Shutdown Hooks
+
+ROS1 had rospy.on_shutdown() - but there is
+[not an equivelant in ROS2](https://github.com/ros2/rclpy/issues/244). It really is not needed though, since we manually shut things down rather than
+was the case in rospy which used many global variables:
+
+```python
+try:
+    rclpy.spin(my_node)
+except KeyboardInterrupt:
+    pass
+finally:
+    my_node.on_shutdown()  # do any custom cleanup
+    my_node.destroy_node()
+    rclpy.shutdown()
+```
