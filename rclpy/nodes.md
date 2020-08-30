@@ -36,7 +36,7 @@ if __name___ == "__main__":
 ## Shutdown Hooks
 
 ROS1 had rospy.on_shutdown() - but there is
-[not an equivelant in ROS2](https://github.com/ros2/rclpy/issues/244). It really is not needed though, since we manually shut things down rather than
+[not an equivalent in ROS2](https://github.com/ros2/rclpy/issues/244). It really is not needed though, since we manually shut things down rather than
 was the case in rospy which used many global variables:
 
 ```python
