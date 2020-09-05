@@ -24,6 +24,9 @@
    * [colcon](pages/colcon.md) is the build tool.
    * ```ros2 doctor --report``` gives tons of information.
 * [CMake](pages/cmake.md)
+* Packaging
+   * [Setting bloom/git to always use ssh](https://answers.ros.org/question/234494/diagnosing-issues-with-bloom-github-two-factor-authentication/)
+   * rosdep install --from-paths src --ignore-src --rosdistro=foxy -y
 * [Package Documentation](pages/packages.md)
 * Status Pages
   * [Foxy Debian Build Status](http://repo.ros2.org/status_page/ros_foxy_default.html)
