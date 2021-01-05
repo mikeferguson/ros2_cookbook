@@ -120,6 +120,16 @@ add_executable(my_node my_node.cpp)
 rosidl_target_interfaces(my_node ${PROJECT_NAME} "rosidl_typesupport_cpp")
 ```
 
+## Removing Boost from Pluginlib
+
+Pluginlib supports both boost::shared_ptrs and std::shared_ptrs by default,
+if you want to avoid depending on Boost in your shiny new ROS2 library, you
+need to specifically tell pluginlib not to include the Boost versions:
+
+```cmake
+target_compile_definitions(your_library PUBLIC "PLUGINLIB__DISABLE_BOOST_FUNCTIONS")
+```
+
 ## Using Eigen3
 
 Add _eigen_ to your package.xml as a dependency, and then:
