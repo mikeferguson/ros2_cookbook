@@ -16,8 +16,8 @@ rclcpp::Time t = node.now();
 double seconds = t.seconds();
 ```
 
-There is no constructor for Time from seconds, so you first need to convert
-to nanoseconds:
+There is no constructor for Time from seconds represented by a floating point,
+so you first need to convert to nanoseconds:
 
 ```cpp
 rclcpp::Time t(static_cast<uin64_t>(seconds * 1e9));
