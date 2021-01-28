@@ -26,7 +26,7 @@ class MyNode(Node):
         super().__init__('my_node_name')
 
         # Declare a parameter
-        node.declare_parameter("my_param_name", 42)
+        self.declare_parameter("my_param_name", 42)
 
         # Then create callback
         self.set_parameters_callback(self.callback)
