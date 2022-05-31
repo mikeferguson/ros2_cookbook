@@ -26,9 +26,10 @@
 * [CMake](pages/cmake.md)
 * Packaging
    * [Setting bloom/git to always use ssh](https://answers.ros.org/question/234494/diagnosing-issues-with-bloom-github-two-factor-authentication/)
-   * rosdep install --from-paths src --ignore-src --rosdistro=foxy -y
+   * rosdep install --from-paths src --ignore-src --rosdistro=humble -y
 * [Package Documentation](pages/packages.md)
 * Status Pages
+  * [Humble Debian Build Status](http://repo.ros2.org/status_page/ros_humble_default.html) 
   * [Foxy Debian Build Status](http://repo.ros2.org/status_page/ros_foxy_default.html)
   * [Rolling Debian Build Status](http://repo.ros2.org/status_page/ros_rolling_default.html)
   * [Compare Foxy/Rolling](http://repo.ros2.org/status_page/compare_foxy_rolling.html)
