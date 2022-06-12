@@ -1,4 +1,4 @@
-# rclcpp::Time
+# rclcpp: Time
 
 The _rclcpp::Time_ and _rclcpp::Duration_ are a significant departure from
 their ROS1 equivalents, but are more closely related to
@@ -22,8 +22,6 @@ so you first need to convert to nanoseconds:
 ```cpp
 rclcpp::Time t(static_cast<uin64_t>(seconds * 1e9));
 ```
-
-# rclcpp::Duration
 
 _rclcpp::Duration_ does have functions to go both directions:
 
