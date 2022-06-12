@@ -1,4 +1,4 @@
-# rclcpp: Time
+# rclcpp::Time
 
 The _rclcpp::Time_ and _rclcpp::Duration_ are a significant departure from
 their ROS1 equivalents, but are more closely related to
@@ -23,9 +23,17 @@ so you first need to convert to nanoseconds:
 rclcpp::Time t(static_cast<uin64_t>(seconds * 1e9));
 ```
 
+# rclcpp::Duration
+
 _rclcpp::Duration_ does have functions to go both directions:
 
 ```cpp
 rclcpp::Duration d = rclcpp::Duration::from_seconds(1.0);
 double seconds = d.seconds();
+```
+
+Unlike ROS1, sleeping does NOT occur from a Duration instance:
+
+```cpp
+rclcpp::sleep_for(std::chrono::milliseconds(50));
 ```
