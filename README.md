@@ -2,6 +2,7 @@
 
  * Client Libraries
    * rclcpp [API](http://docs.ros2.org/latest/api/rclcpp/)
+     * [Logging](rclcpp/logging.md)
      * [Nodes and Components](rclcpp/nodes.md)
      * [Parameters](rclcpp/parameters.md)
      * [Point Clouds](rclcpp/pcl.md)
