@@ -107,7 +107,11 @@ install(
 It is generally best practice to put messages in separate packages, but sometimes,
 especially for drivers, you want the messages in the same package.
 
+The following example worked in earlier versions of ROS2 - but the syntax has changed
+See the [Implementing custom interfaces tutorial](https://docs.ros.org/en/rolling/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.html#link-against-the-interface) for newer ROS2 distributions.
+
 ```cmake
+# Note: this WILL NOT work in ROS2 Humble or later
 find_package(rosidl_default_generators REQUIRED)
 
 # Generate some messages
