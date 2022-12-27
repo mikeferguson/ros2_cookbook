@@ -29,7 +29,7 @@ class MyNode(Node):
         self.declare_parameter("my_param_name", 42)
 
         # Then create callback
-        self.set_parameters_callback(self.callback)
+        self.add_on_set_parameters_callback(self.callback)
     
     def callback(self, parameters):
         result = SetParametersResult(successful=True)
