@@ -35,3 +35,8 @@ Unlike ROS1, sleeping does NOT occur from a Duration instance:
 ```cpp
 rclcpp::sleep_for(std::chrono::milliseconds(50));
 ```
+
+## API Documentation Links
+
+ * [rclcpp::Time](https://docs.ros2.org/latest/api/rclcpp/classrclcpp_1_1Time.html)
+ * [rclcpp::Duration](https://docs.ros2.org/latest/api/rclcpp/classrclcpp_1_1Duration.html)
