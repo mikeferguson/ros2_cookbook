@@ -133,5 +133,4 @@ Node(
 
 ## Installing Launch Files
 
- * [Python](https://index.ros.org/doc/ros2/Tutorials/Launch-system/#python-packages)
- * [C++/CMake](https://index.ros.org/doc/ros2/Tutorials/Launch-system/#c-packages)
+ * [Launch System Tutorial](https://docs.ros.org/en/rolling/Tutorials/Intermediate/Launch/Launch-system.html#creating-the-structure-to-hold-launch-files)
