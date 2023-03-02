@@ -1,5 +1,14 @@
 # Command Line: Colcon
 
+## My Aliases
+
+I hate typing - so these are the aliases in my ``~/.bashrc`` for my most common workflow:
+
+```
+alias build2="colcon build --symlink-install"
+alias test2="colcon test --event-handlers console_direct+"
+```
+
 ## Build
 
 _colcon_ is used to build ROS2 packages in a workspace.
