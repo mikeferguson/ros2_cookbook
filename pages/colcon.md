@@ -65,6 +65,12 @@ Get the output to the screen:
 colcon <verb> --event-handlers console_direct+
 ```
 
+## Be Careful With Workspaces
+
+You should probably build your workspace in a window where you have NOT sourced the
+setup.bash of that workspace. For more details on why, see
+[this ticket](https://github.com/colcon/colcon-core/issues/194).
+
 ## Verb Documentation
 
  * [build](https://colcon.readthedocs.io/en/released/reference/verb/build.html)
