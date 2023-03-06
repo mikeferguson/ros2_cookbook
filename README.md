@@ -14,6 +14,7 @@
      * [Parameters](rclpy/parameters.md)
      * [Time](rclpy/time.md)
      * [TF2](rclpy/tf2.md)
+     * [Synchronous service call](rclpy/synchronous_service_call.md)
  * [ros2launch](pages/launch.md)
  * [Networking (DDS & CycloneDDS)](pages/networking.md)
  * Command Line Tools
