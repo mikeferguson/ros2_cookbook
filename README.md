@@ -27,7 +27,8 @@
 * [CMake](pages/cmake.md)
 * Packaging
    * [Setting bloom/git to always use ssh](https://answers.ros.org/question/234494/diagnosing-issues-with-bloom-github-two-factor-authentication/)
-   * rosdep install --from-paths src --ignore-src --rosdistro=humble -y
+     * ```git config --global url.ssh://git@github.com/.insteadOf https://github.com/```
+   * ```rosdep install --from-paths src --ignore-src --rosdistro=humble -y```
 * [Package Documentation](pages/packages.md)
 * Status Pages
   * [Humble Debian Build Status](http://repo.ros2.org/status_page/ros_humble_default.html) 
