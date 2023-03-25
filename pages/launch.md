@@ -1,5 +1,7 @@
 # roslaunch2
 
+See also [rosetta_launch](https://github.com/MetroRobots/rosetta_launch) for a number of examples.
+
 ## Python-Based Launch Files
 
 Python-based launch files all pretty much follow the same structure.
