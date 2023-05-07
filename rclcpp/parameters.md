@@ -88,7 +88,6 @@ models:
  - name: camera
    type: camera3d
    frame: head_camera_rgb_optical_frame
-   topic: /head_camera/depth_registered/points
 ```
 
 In ROS 2, the common pattern is to make the array a list of just names,
@@ -104,7 +103,6 @@ arm:
 camera:
   type: camera3d
   frame: head_camera_rgb_optical_frame
-  topic: /head_camera/depth_registered/points
 ```
 
 To parse such a block:
