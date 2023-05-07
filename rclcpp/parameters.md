@@ -18,10 +18,10 @@ node.get_parameter("my_param_name", param);
 
 ## Dynamic Parameters
 
-In ROS2, all parameters can be dynamically updated through a ROS2 service
+In ROS 2, all parameters can be dynamically updated through a ROS 2 service
 (there is no need to define duplicate stuff as with dynamic reconfigure).
 
-The example below works in Eloquent or later (earlier ROS2 releases supported
+The example below works in Eloquent or later (earlier ROS 2 releases supported
 only a single callback and had a slightly different API).
 See the documentation for
 [rclcpp::ParameterType](http://docs.ros2.org/latest/api/rclcpp/namespacerclcpp.html#enum-members)
@@ -75,9 +75,9 @@ private:
 
 ```
 
-## Porting XML Arrays to ROS2
+## Porting XML Arrays to ROS 2
 
-Complex parameter blocks could be parsed as XML in ROS1. For instance, the
+Complex parameter blocks could be parsed as XML in ROS 1. For instance, the
 robot_calibration package used a block like:
 
 ```yaml
@@ -91,7 +91,7 @@ models:
    topic: /head_camera/depth_registered/points
 ```
 
-In ROS2, the common pattern is to make the array a list of just names,
+In ROS 2, the common pattern is to make the array a list of just names,
 then have each name be a block of parameters:
 
 ```yaml
