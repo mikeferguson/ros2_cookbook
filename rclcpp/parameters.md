@@ -74,3 +74,52 @@ private:
 };
 
 ```
+
+## Porting XML Arrays to ROS2
+
+Complex parameter blocks could be parsed as XML in ROS1. For instance, the
+robot_calibration package used a block like:
+
+```yaml
+models:
+ - name: arm
+   type: chain
+   frame: wrist_roll_link
+ - name: camera
+   type: camera3d
+   frame: head_camera_rgb_optical_frame
+   topic: /head_camera/depth_registered/points
+```
+
+In ROS2, the common pattern is to make the array a list of just names,
+then have each name be a block of parameters:
+
+```yaml
+models:
+- arm
+- camera
+arm:
+  type: chain3d
+  frame: wrist_roll_link
+camera:
+  type: camera3d
+  frame: head_camera_rgb_optical_frame
+  topic: /head_camera/depth_registered/points
+```
+
+To parse such a block:
+
+```cpp
+std::vector<ModelParams> models;
+auto model_names = node->declare_parameter<std::vector<std::string>>("models", std::vector<std::string>());
+for (auto name : model_names)
+{
+  RCLCPP_INFO(logger, "Adding model: %s", name.c_str());
+  ModelParams params;
+  params.name = name;
+  params.type = node->declare_parameter<std::string>(name + ".type", std::string());
+  params.frame = node->declare_parameter<std::string>(name + ".frame", std::string());
+  params.param_name = node->declare_parameter<std::string>(name + ".param_name", std::string());
+  models.push_back(params);
+}
+```
