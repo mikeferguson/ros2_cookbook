@@ -1,6 +1,6 @@
 # rclpy: Time
 
-To get the equivalent of rospy.Time.now(), you now need a ROS2 node:
+To get the equivalent of rospy.Time.now(), you now need a ROS 2 node:
 
 ```python
 import rclpy
@@ -39,4 +39,21 @@ class MyNode(Node):
 
     def callback(self):
         self.get_logger().info("timer has fired")
+```
+
+Using Rate objects in ROS 2 is a bit more complex than in ROS 1. Due to implementation
+details, we need to spin() or the sleep() function will block. This is most easily
+accomplished using a thread:
+
+```python
+import threading
+
+# Run spin in a thread, make thread daemon so we don't have to join it to exit
+thread = threading.Thread(target=rclpy.spin, args=(node, ), daemon=True)
+thread.start()
+
+rate = node.create_rate(10)
+while rclpy.ok():
+    print('This prints at 10hz')
+    rate.sleep()
 ```
