@@ -22,6 +22,8 @@ from rclpy.duration import Duration
 msg.duration = Duration(seconds=1).to_msg()
 ```
 
+## Timers
+
 Timers are created from the Node:
 
 ```python
@@ -40,6 +42,8 @@ class MyNode(Node):
     def callback(self):
         self.get_logger().info("timer has fired")
 ```
+
+## Rate
 
 Using Rate objects in ROS 2 is a bit more complex than in ROS 1. Due to implementation
 details, we need to spin() or the sleep() function will block. This is most easily
