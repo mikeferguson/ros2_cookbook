@@ -2,9 +2,9 @@
 
 ## Lazy Publishers
 
-ROS2 does not yet have subscriber connect callbacks. This code creates
-a function which is called periodically to check if we need to start
-or stop subscribers:
+Prior to the Iron release, ROS 2 did not support subscriber connect
+callbacks. This code creates a function which is called periodically
+to check if we need to start or stop subscribers:
 
 ```cpp
 #include <rclcpp/rclcpp.hpp>
