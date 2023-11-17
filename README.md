@@ -25,6 +25,11 @@
    * [colcon](pages/colcon.md) is the build tool.
    * ```ros2 doctor --report``` gives tons of information.
 * [CMake](pages/cmake.md)
+* Bag Files:
+   * ```ros2 bag record /topic1 /topic2```
+   * Playback:
+      * ```ros2 run rviz2 rviz2 --ros-args -p use_sim_time:=true```
+      * ```ros2 bag play <bagfile>```
 * Packaging
    * [Setting bloom/git to always use ssh](https://answers.ros.org/question/234494/diagnosing-issues-with-bloom-github-two-factor-authentication/)
      * ```git config --global url.ssh://git@github.com/.insteadOf https://github.com/```
