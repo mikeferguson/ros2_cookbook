@@ -12,4 +12,5 @@ used packages.
 
 ## Higher Level Packages
 
+ * [MoveIt2](https://moveit.ros.org/)
  * [Navigation2](https://navigation.ros.org/)
