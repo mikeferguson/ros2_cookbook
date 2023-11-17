@@ -6,8 +6,8 @@ used packages.
 
 ## Core Documentation
 
- * [ROS 2 Overview](https://index.ros.org/doc/ros2/)
- * [Ament CMake](https://index.ros.org/doc/ros2/Tutorials/Ament-CMake-Documentation/)
+ * [ROS 2 Overview](https://docs.ros.org/en/rolling/index.html)
+ * [Ament CMake](https://docs.ros.org/en/rolling/How-To-Guides/Ament-CMake-Documentation.html)
  * [ROS2 Launch](https://github.com/ros2/launch/blob/master/launch/doc/source/architecture.rst)
 
 ## Higher Level Packages
