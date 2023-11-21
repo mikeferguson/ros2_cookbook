@@ -5,8 +5,10 @@ See also [rosetta_launch](https://github.com/MetroRobots/rosetta_launch) for a n
 ## Python-Based Launch Files
 
 Python-based launch files all pretty much follow the same structure.
-Note that prior to _Foxy_, the parameters _name_, _namespace_, and _executable_ were
-[prefixed with node\_](https://index.ros.org/doc/ros2/Releases/Release-Foxy-Fitzroy/#launch-ros):
+
+> [!NOTE]
+> Prior to _Foxy_, the parameters _name_, _namespace_, and _executable_ were
+> [prefixed with node\_](https://index.ros.org/doc/ros2/Releases/Release-Foxy-Fitzroy/#launch-ros)
 
 ```python
 from launch import LaunchDescription
