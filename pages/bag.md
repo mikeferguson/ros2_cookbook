@@ -19,6 +19,78 @@ bagfile in Python, the linked one comes from an MCAP tutorial:
  * [Record in Python](https://docs.ros.org/en/rolling/Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-Py.html)
  * [Playback in Python](https://mcap.dev/guides/python/ros2)
 
+## Converting Bag Files from ROS 1
+
+The following works, assuming you are mainly using standard topics. For instance,
+I have converted a number of bagfiles intended for SLAM testing, which mainly
+consist of sensor_msgs::LaserScan, TF, and nav_msgs::Odometry data.
+
+The easiest route for converting bagfiles is to use ``rosbags``:
+
+```
+sudo pip3 install rosbags
+rosbag-convert bagfile_name.bag
+```
+
+This will create a new folder with the name ``bagfile_name`` containing the
+SQLite file and the index file. At this point, you can inspect the bagfile:
+
+```
+ros2 bag info bagfile_name
+
+Files:             bagfile_name.db3
+Bag size:          65.7 MiB
+Storage id:        sqlite3
+ROS Distro:        rosbags
+Duration:          122.298s
+Start:             Jun 15 2014 21:41:49.861 (1402882909.861)
+End:               Jun 15 2014 21:43:52.159 (1402883032.159)
+Messages:          35187
+Topic information: Topic: odom | Type: nav_msgs/msg/Odometry | Count: 12141 | Serialization Format: cdr
+                   Topic: tf | Type: tf2_msgs/msg/TFMessage | Count: 16939 | Serialization Format: cdr
+                   Topic: base_scan | Type: sensor_msgs/msg/LaserScan | Count: 4884 | Serialization Format: cdr
+                   Topic: odom_combined | Type: nav_msgs/msg/Odometry | Count: 1223 | Serialization Format: cdr
+```
+
+This bagfile is now useable in ROS 2. However, you can also go a bit
+further by compressing the bagfile, and migrating it to the new MCAP
+file format. First, create a YAML file to define the output format:
+
+```
+# output_format.yaml
+output_bags:
+- uri: bagfile_name_compressed
+  all: true
+  compression_mode: file
+  compression_format: zstd
+```
+
+Now, run the conversion:
+
+```
+ros2 bag convert -i bagfile_name -o output_format.yaml
+```
+
+Inspecting the new bag, we can see that compression is very nice - a
+75% reduction in file size for my typical SLAM bag files:
+
+```
+ros2 bag info bagfile_name_compressed
+
+Files:             bagfile_name_compressed.mcap.zstd
+Bag size:          16.7 MiB
+Storage id:        mcap
+ROS Distro:        rolling
+Duration:          122.298s
+Start:             Jun 15 2014 21:41:49.861 (1402882909.861)
+End:               Jun 15 2014 21:43:52.159 (1402883032.159)
+Messages:          35187
+Topic information: Topic: base_scan | Type: sensor_msgs/msg/LaserScan | Count: 4884 | Serialization Format: cdr
+                   Topic: odom | Type: nav_msgs/msg/Odometry | Count: 12141 | Serialization Format: cdr
+                   Topic: odom_combined | Type: nav_msgs/msg/Odometry | Count: 1223 | Serialization Format: cdr
+                   Topic: tf | Type: tf2_msgs/msg/TFMessage | Count: 16939 | Serialization Format: cdr
+```
+
 ## Removing TF from a Bagfile
 
 I have often found that I needed to remove problematic TF data from a bagfile,
