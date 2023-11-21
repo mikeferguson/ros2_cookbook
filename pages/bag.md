@@ -56,7 +56,7 @@ This bagfile is now useable in ROS 2. However, you can also go a bit
 further by compressing the bagfile, and migrating it to the new MCAP
 file format. First, create a YAML file to define the output format:
 
-```
+```yaml
 # output_format.yaml
 output_bags:
 - uri: bagfile_name_compressed
