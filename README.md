@@ -16,7 +16,11 @@
      * [TF2](rclpy/tf2.md)
  * [ros2launch](pages/launch.md)
  * [rosbag2](pages/bag.md)
- * [Networking (DDS & CycloneDDS)](pages/networking.md)
+   * [Common CLI Commands](pages/bag.md#common-command-line)
+   * [API Tutorials](pages/bag.md#api-tutorials)
+   * [Converting Bags from ROS 1 to ROS 2](pages/bag.md#converting-bag-files-from-ros-1)
+   * [Removing TF From a Bagfile](pages/bag.md#removing-tf-from-a-bagfile)
+ * [Networking (DDS & CycloneDDS)](pages/pages/networking.md)
  * Command Line Tools
    * ```ros2 run <pkg> <node>```
    * ```ros2 node list```
