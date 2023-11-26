@@ -83,3 +83,13 @@ geometry_msgs::msg::TransformStamped transform =
 
 tf2::doTransform(in, out, transform);
 ```
+
+## Transform from Eigen::Isometry3d
+
+```cpp
+#include <tf2_eigen/tf2_eigen.hpp>
+
+Eigen::Isometry3d map_to_odom;
+geometry_msgs::msg::TransformStamped transform = tf2::eigenToTransform(map_to_odom);
+// Fill in header, child_frame_id
+```
