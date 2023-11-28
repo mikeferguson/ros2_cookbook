@@ -1,0 +1,84 @@
+site_name: ROS 2 Cookbook
+site_url: https://github.com/mikeferguson/ros2_cookbook
+site_author: Michael Ferguson
+site_description: Code snippets for ROS2
+
+repo_name: mikeferguson/ros2_cookbook
+repo_url: https://github.com/mikeferguson/ros2_cookbook
+
+copyright: "This work is licensed under a <a rel='license' href='https://creativecommons.org/publicdomain/zero/1.0/'>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a>."
+
+theme:
+  name: material
+  logo: assets/icon.svg
+  favicon: assets/icon.svg
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+    - scheme: default
+      primary: grey
+      accent: indigo
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+  font:
+    text: Overpass
+    code: Overpass Mono
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    - header.autohide
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.caret
+  - pymdownx.details
+  # - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - docs/assets
+  - pymdownx.highlight:
+      use_pygments: true
+      # linenums: false
+      linenums_style: pymdownx-inline
+      anchor_linenums: true
+      line_spans: __span
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - offline
+  - search
+  - section-index
+  - gen-files:
+      scripts:
+        - docs/generate_cookbook.py
+  - literate-nav:
+      nav_file: literate-nav.md
