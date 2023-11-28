@@ -1,0 +1,14 @@
+{
+    "image": "squidfunk/mkdocs-material:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "yzhang.markdown-all-in-one",
+            ],
+        }
+    },
+    "forwardPorts": [
+        3000
+    ],
+    "postCreateCommand": ".devcontainer/post-create.sh",
+}
