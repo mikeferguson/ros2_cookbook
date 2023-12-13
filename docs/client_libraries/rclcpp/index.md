@@ -8,5 +8,6 @@
 ##[:material-axis-arrow: TF2](tf2.md)
 ##[:material-cloud: Point Clouds](pcl.md)
 ##[:material-lightbulb-variant: Workarounds](workarounds.md)
+##[:material-creation: Initialization](initialization.md)
 
 </div>

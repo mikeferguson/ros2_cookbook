@@ -91,6 +91,7 @@ nav:
       - TF2: client_libraries/rclcpp/tf2.md
       - Point Clouds: client_libraries/rclcpp/pcl.md
       - Workarounds: client_libraries/rclcpp/workarounds.md
+      - Initialization: client_libraries/rclcpp/initialization.md
     - rclpy:
       - client_libraries/rclpy/index.md
       - Nodes: client_libraries/rclpy/nodes.md
