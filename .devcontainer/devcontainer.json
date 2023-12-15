@@ -3,12 +3,16 @@
     "customizations": {
         "vscode": {
             "extensions": [
+                "charliermarsh.ruff",
+                "christian-kohler.path-intellisense",
+                "ms-python.python",
                 "yzhang.markdown-all-in-one",
-            ],
+                "tamasfe.even-better-toml"
+            ]
         }
     },
     "forwardPorts": [
         3000
     ],
-    "postCreateCommand": ".devcontainer/post-create.sh",
+    "postCreateCommand": ".devcontainer/post-create.sh"
 }

@@ -1,3 +1,3 @@
 #!/bin/ash
 
-pip install mkdocs-section-index
+pip install -r requirements-docs.txt

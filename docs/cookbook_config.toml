@@ -1,0 +1,9 @@
+[[client_libraries]]
+name="C++"
+path="rclcpp"
+icon=":simple-cplusplus:"
+
+[[client_libraries]]
+name="Python"
+path="rclpy"
+icon=":simple-python:"

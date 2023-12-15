@@ -31,6 +31,9 @@ theme:
     text: Overpass
     code: Overpass Mono
   features:
+    - content.code.annotate
+    - content.tabs.link
+    - header.autohide
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
@@ -38,9 +41,6 @@ theme:
     - navigation.top
     - navigation.footer
     - toc.follow
-    - header.autohide
-    - content.code.annotate
-    - content.tabs.link
 
 extra_css:
   - stylesheets/extra.css
@@ -77,35 +77,8 @@ plugins:
   - offline
   - search
   - section-index
-
-nav:
-  - Home: index.md
-  - Client Libraries:
-    - client_libraries/index.md
-    - rclcpp:
-      - client_libraries/rclcpp/index.md
-      - Nodes: client_libraries/rclcpp/nodes.md
-      - Parameters: client_libraries/rclcpp/parameters.md
-      - Logging: client_libraries/rclcpp/logging.md
-      - Time: client_libraries/rclcpp/time.md
-      - TF2: client_libraries/rclcpp/tf2.md
-      - Point Clouds: client_libraries/rclcpp/pcl.md
-      - Workarounds: client_libraries/rclcpp/workarounds.md
-      - Initialization: client_libraries/rclcpp/initialization.md
-    - rclpy:
-      - client_libraries/rclpy/index.md
-      - Nodes: client_libraries/rclpy/nodes.md
-      - Parameters: client_libraries/rclpy/parameters.md
-      - Logging: client_libraries/rclpy/logging.md
-      - Time: client_libraries/rclpy/time.md
-      - TF2: client_libraries/rclpy/tf2.md
-  - ROS 2 Tools:
-    - tools/index.md
-    - ros2launch: tools/launch.md
-    - rosbag2: tools/bag.md
-    - Networking (DDS & CycloneDDS): tools/networking.md
-    - Command Line Tools : tools/command_line.md
-    - colcon: tools/colcon.md
-    - CMake: tools/cmake.md
-    - rosdep: tools/rosdep.md
-  - Documentation: documentation.md
+  - gen-files:
+      scripts:
+        - docs/generate_cookbook.py
+  - literate-nav:
+      nav_file: literate-nav.md
