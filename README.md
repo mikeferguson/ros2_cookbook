@@ -41,6 +41,8 @@
      * ```git config --global url.ssh://git@github.com/.insteadOf https://github.com/```
    * ```rosdep install --from-paths src --ignore-src --rosdistro=humble -y```
 * [Package Documentation](pages/packages.md)
+* Limitations / Bugs
+  * [Cannot generate messages and call ament_python_install_package() in same package](https://github.com/ros2/rosidl_python/issues/141)
 * Status Pages
   * [Rolling Debian Build Status](http://repo.ros2.org/status_page/ros_rolling_default.html)
   * [Iron Debian Build Status](http://repo.ros2.org/status_page/ros_iron_default.html)
