@@ -13,7 +13,7 @@ from tf2_ros.transform_listener import TransformListener
 
 class MyNode(Node):
     def __init__(self):
-        super().__init__("my_node")
+        super().__init__('my_node')
 
         self.buffer = Buffer()
         self.listener = TransformListener(self.buffer, self)
@@ -35,10 +35,23 @@ import tf2_geometry_msgs
 # Setup buffer/listener as above
 
 p1 = PointStamped()
-p1.header.frame_id = "source_frame"
+p1.header.frame_id = 'source_frame'
 # fill in p1
 
-p2 = buffer.transform(p1, "target_frame")
+p2 = buffer.transform(p1, 'target_frame')
+```
+
+### Using the Latest Transform
+
+```python
+from rclpy.time import Time
+
+# Setting the stamp to a blank Time() instance will use the latest available data
+p1 = PointStamped()
+p1.header.frame_id = 'source_frame'
+p1.header.stamp = Time()
+
+p2 = buffer.transform(p1, 'target_frame')
 ```
 
 ## Transformations
