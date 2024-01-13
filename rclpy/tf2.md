@@ -49,7 +49,7 @@ from rclpy.time import Time
 # Setting the stamp to a blank Time() instance will use the latest available data
 p1 = PointStamped()
 p1.header.frame_id = 'source_frame'
-p1.header.stamp = Time()
+p1.header.stamp = Time().to_msg()
 
 p2 = buffer.transform(p1, 'target_frame')
 ```
