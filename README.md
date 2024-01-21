@@ -16,7 +16,7 @@
      * [TF2](rclpy/tf2.md)
  * [ros2launch](pages/launch.md)
    * [Python-Based Launch Files](pages/launch.md#python-based-launch-files)
-   * [Making a Launch File Executable](main/pages/launch.md#making-a-launch-file-executable)
+   * [Making a Launch File Executable](pages/launch.md#making-a-launch-file-executable)
    * [Loading Parameters From a File](pages/launch.md#loading-parameters-from-a-file)
    * [Including Python Launch Files](pages/launch.md#including-python-launch-files)
    * [Loading a URDF](pages/launch.md#loading-a-urdf)
