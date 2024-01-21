@@ -84,6 +84,22 @@ geometry_msgs::msg::TransformStamped transform =
 tf2::doTransform(in, out, transform);
 ```
 
+## Getting Yaw Angle from Quaternion
+
+```
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+#include <tf2/utils.hpp>
+
+geometry_msgs::msg::Pose pose;
+double yaw = tf2::getYaw(pose.orientation);
+```
+
+> [!NOTE]
+> ```tf2::getYaw``` requires some pieces from ```tf2_geometery_msgs/tf2_geometry_msgs.hpp```
+> but cannot depend on them because it would create a circular dependency. This means you
+> absolutely need to include tf2_geometry_msgs BEFORE tf2/utils or you will get an
+> undefined reference to ```tf2::fromMsg```
+
 ## Transform from Eigen::Isometry3d
 
 ```cpp
