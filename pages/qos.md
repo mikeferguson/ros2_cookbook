@@ -60,6 +60,6 @@ What is the significance of this number, which is approximately equal to 68 year
     # Nanoseconds component in the range of [0, 1e9).
     uint32 nanosec
 
-The max value for an `int32` is $2^31 - 1$. The max value for an `uint32` is $2^32 - 1$. (Note: According to the definition, any value for `nanosec` over 1e9 is invalid.)
+The max value for an `int32` is $2^{31} - 1$. The max value for an `uint32` is $2^{32} - 1$. (Note: According to the definition, any value for `nanosec` over 1e9 is invalid.)
 
-So the magic number 2147483651294967295 is the number of nanoseconds equivalent to $2^31 -1$ seconds ($2147483647$ seconds) added to $2^32 - 1$ nanoseconds ($4.294967295$ seconds). 
+So the magic number 2147483651294967295 is the number of nanoseconds equivalent to $2^{31} -1$ seconds ($2147483647$ seconds) added to $2^{32} - 1$ nanoseconds ($4.294967295$ seconds). 
