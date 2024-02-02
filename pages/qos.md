@@ -14,7 +14,8 @@ specifying ``volatile`` rather than ``transient local``.
 
 ## Overrides
 
-``rclcpp`` offers a consistent way to define QoS overrides as parameters. In your code:
+``rclcpp`` offers a consistent way to define QoS overrides as parameters. There is a (somewhat dated/inaccurate)
+[design doc](http://design.ros2.org/articles/qos_configurability.html) on this feature. In your code:
 
 ```cpp
 // Allow overriding QoS settings (history, depth, reliability)
