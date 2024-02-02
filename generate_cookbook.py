@@ -45,7 +45,7 @@ for client_lib in client_libraries:
         mkdocs_gen_files.set_edit_path(client_lib_page_path, path)
 
         # Get the path's parts
-        nav_path = ["Client Librairies", client_lib["name"]]
+        nav_path = ["Client Libraries", client_lib["name"]]
         if (page_name := path.with_suffix("").name) != "index":
             nav_path.append(page_name.capitalize())
 
