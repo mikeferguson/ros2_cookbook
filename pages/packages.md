@@ -1,7 +1,3 @@
----
-hide:
-  - navigation
----
 # Documentation
 
 Currently, documentation is a bit all over the place. This list is certainly
