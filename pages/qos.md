@@ -1,5 +1,17 @@
 # QoS (Quality of Service)
 
+## Recommended Practices
+
+ * [REP-2003](https://ros.org/reps/rep-2003.html) defines recommended practices for maps and sensor drivers.
+ * The suggested practice for "sensor drivers" is also pretty reasonable for most vision pipelines, and
+   and that is to:
+   * Publish with ``SystemDefaultQoS``
+   * Subscribe with ``SensorDataQoS``
+
+Subscribing with ``SensorDataQoS`` means that we will get unreliable transport but be more immune to lossy networks.
+By publishing with ``SystemDefaultQoS`` we will still be able to connect to any subscriber as long as they are
+specifying ``volatile`` rather than ``transient local``.
+
 ## Overrides
 
 ``rclcpp`` offers a consistent way to define QoS overrides as parameters. In your code:
