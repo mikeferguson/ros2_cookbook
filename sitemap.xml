@@ -66,11 +66,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclpy/logging.html</loc>
-         <lastmod>2024-02-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclpy/nodes.html</loc>
          <lastmod>2024-02-02</lastmod>
          <changefreq>daily</changefreq>
