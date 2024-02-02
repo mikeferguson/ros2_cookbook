@@ -1,7 +1,32 @@
-# QoS
-## aka Quality of Service
+# QoS (Quality of Service)
 
-### Magic Numbers
+## Overrides
+
+``rclcpp`` offers a consistent way to define QoS overrides as parameters. In your code:
+
+```cpp
+// Allow overriding QoS settings (history, depth, reliability)
+rclcpp::PublisherOptions pub_options;
+pub_options.qos_overriding_options = rclcpp::QosOverridingOptions::with_default_policies();
+node->create_publisher<std_msgs::msg::String>("topic", rclcpp::QoS(10), pub_options);
+```
+
+Then, in your parameter file, you can define:
+
+```yaml
+node_name:
+  ros__parameters:
+    qos_overrides:
+      fully_resolved_topic_name:
+        publisher:
+          reliability: reliable
+          history_depth: 100
+          history: keep_last
+```
+
+The same workflow works for subscribers, you just use ``rclcpp::SubscriptionOptions`` instance and change ``publisher`` to ``subscription`` in the YAML file.
+
+## Magic Numbers
 
 If you perform `ros2 topic info -v /some/topic` and you examine the QoS settings, you may note that several fields are set to the magic number 2147483651294967295 (or 2,147,483,651,294,967,295). e.g. 
 
