@@ -36,6 +36,7 @@
    * [colcon](pages/colcon.md) is the build tool.
    * ```ros2 doctor --report``` gives tons of information.
 * [CMake](pages/cmake.md)
+* [QoS](pages/qos.md)
 * Packaging
    * [Setting bloom/git to always use ssh](https://answers.ros.org/question/234494/diagnosing-issues-with-bloom-github-two-factor-authentication/)
      * ```git config --global url.ssh://git@github.com/.insteadOf https://github.com/```
