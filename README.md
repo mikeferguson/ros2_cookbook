@@ -26,7 +26,7 @@
    * [API Tutorials](pages/bag.md#api-tutorials)
    * [Converting Bags from ROS 1 to ROS 2](pages/bag.md#converting-bag-files-from-ros-1)
    * [Removing TF From a Bagfile](pages/bag.md#removing-tf-from-a-bagfile)
- * [Networking (DDS & CycloneDDS)](pages/pages/networking.md)
+ * [Networking (DDS & CycloneDDS)](pages/networking.md)
  * Command Line Tools
    * ```ros2 run <pkg> <node>```
    * ```ros2 node list```
@@ -47,7 +47,7 @@
 * Status Pages
   * [Rolling Debian Build Status](http://repo.ros2.org/status_page/ros_rolling_default.html)
   * [Iron Debian Build Status](http://repo.ros2.org/status_page/ros_iron_default.html)
-  * [Humble Debian Build Status](http://repo.ros2.org/status_page/ros_humble_default.html) 
+  * [Humble Debian Build Status](http://repo.ros2.org/status_page/ros_humble_default.html)
 
 ## License
 
