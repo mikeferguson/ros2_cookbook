@@ -1,4 +1,4 @@
-# Documentation
+# Package Documentation
 
 Currently, documentation is a bit all over the place. This list is certainly
 not extensive, but I find it helpful to have quick links to the frequently
