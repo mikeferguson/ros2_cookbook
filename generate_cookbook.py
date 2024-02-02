@@ -33,7 +33,7 @@ client_libs_index_text = "\n".join([
 with mkdocs_gen_files.open(client_libs_index_path, "w") as fd:
     print(client_libs_index_text, file=fd)
 
-literate_nav["Client Librairies"] = client_libs_index_path.as_posix()
+literate_nav["Client Libraries"] = client_libs_index_path.as_posix()
 
 # Create the client libraries pages
 for client_lib in client_libraries:
