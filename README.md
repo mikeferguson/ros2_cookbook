@@ -27,6 +27,9 @@
    * [Converting Bags from ROS 1 to ROS 2](pages/bag.md#converting-bag-files-from-ros-1)
    * [Removing TF From a Bagfile](pages/bag.md#removing-tf-from-a-bagfile)
  * [Networking (DDS & CycloneDDS)](pages/networking.md)
+ * [Documenting with rosdoc2](pages/rosdoc2.md)
+ * [CMake](pages/cmake.md)
+ * [QoS](pages/qos.md)
  * Command Line Tools
    * ```ros2 run <pkg> <node>```
    * ```ros2 node list```
@@ -35,19 +38,17 @@
    * ```ros2 param list```
    * [colcon](pages/colcon.md) is the build tool.
    * ```ros2 doctor --report``` gives tons of information.
-* [CMake](pages/cmake.md)
-* [QoS](pages/qos.md)
-* Packaging
+ * Packaging
    * [Setting bloom/git to always use ssh](https://answers.ros.org/question/234494/diagnosing-issues-with-bloom-github-two-factor-authentication/)
      * ```git config --global url.ssh://git@github.com/.insteadOf https://github.com/```
    * ```rosdep install --from-paths src --ignore-src --rosdistro=humble -y```
-* [Package Documentation](pages/packages.md)
-* Limitations / Bugs
-  * [Cannot generate messages and call ament_python_install_package() in same package](https://github.com/ros2/rosidl_python/issues/141)
-* Status Pages
-  * [Rolling Debian Build Status](http://repo.ros2.org/status_page/ros_rolling_default.html)
-  * [Iron Debian Build Status](http://repo.ros2.org/status_page/ros_iron_default.html)
-  * [Humble Debian Build Status](http://repo.ros2.org/status_page/ros_humble_default.html)
+ * [Package Documentation](pages/packages.md)
+ * Limitations / Bugs
+   * [Cannot generate messages and call ament_python_install_package() in same package](https://github.com/ros2/rosidl_python/issues/141)
+ * Status Pages
+   * [Rolling Debian Build Status](http://repo.ros2.org/status_page/ros_rolling_default.html)
+   * [Iron Debian Build Status](http://repo.ros2.org/status_page/ros_iron_default.html)
+   * [Humble Debian Build Status](http://repo.ros2.org/status_page/ros_humble_default.html)
 
 ## License
 
