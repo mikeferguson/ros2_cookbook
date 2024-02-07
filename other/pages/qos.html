@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/icon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -1195,7 +1195,7 @@ specifying <code>volatile</code> rather than <code>transient local</code>.</p>
     Liveliness: RMW_QOS_POLICY_LIVELINESS_AUTOMATIC
     Liveliness lease duration: 2147483651294967295 nanoseconds
 </code></pre></div>
-<p>What is the significance of this number, which is approximately equal to 68 years? It's not $2^n - 1$ as you might expect for a magic number. However, durations are defined as </p>
+<p>What is the significance of this number, which is approximately equal to 68 years? It's not <span class="arithmatex">\(2^n - 1\)</span> as you might expect for a magic number. However, durations are defined as </p>
 <div class="highlight"><pre><span></span><code>[builtin_interfaces/Duration]
 # Seconds component, range is valid over any possible int32 value.
 int32 sec
@@ -1203,8 +1203,8 @@ int32 sec
 # Nanoseconds component in the range of [0, 1e9).
 uint32 nanosec
 </code></pre></div>
-<p>The max value for an <code>int32</code> is $2^{31} - 1$. The max value for an <code>uint32</code> is $2^{32} - 1$. (Note: According to the definition, any value for <code>nanosec</code> over 1e9 is invalid.)</p>
-<p>So the magic number 2147483651294967295 is the number of nanoseconds equivalent to $2^{31} -1$ seconds ($2147483647$ seconds) added to $2^{32} - 1$ nanoseconds ($4.294967295$ seconds). </p>
+<p>The max value for an <code>int32</code> is <span class="arithmatex">\(2^{31} - 1\)</span>. The max value for an <code>uint32</code> is <span class="arithmatex">\(2^{32} - 1\)</span>. (Note: According to the definition, any value for <code>nanosec</code> over 1e9 is invalid.)</p>
+<p>So the magic number 2147483651294967295 is the number of nanoseconds equivalent to <span class="arithmatex">\(2^{31} -1\)</span> seconds (<span class="arithmatex">\(2147483647\)</span> seconds) added to <span class="arithmatex">\(2^{32} - 1\)</span> nanoseconds (<span class="arithmatex">\(4.294967295\)</span> seconds). </p>
 
 
 
@@ -1306,7 +1306,13 @@ uint32 nanosec
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
