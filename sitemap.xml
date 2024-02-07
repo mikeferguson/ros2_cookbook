@@ -135,4 +135,9 @@
          <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://github.com/mikeferguson/ros2_cookbook/other/pages/rosdoc2.html</loc>
+         <lastmod>2024-02-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
