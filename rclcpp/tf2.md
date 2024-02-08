@@ -84,9 +84,25 @@ geometry_msgs::msg::TransformStamped transform =
 tf2::doTransform(in, out, transform);
 ```
 
+## Constructing Transform from Euler Angles
+There are numerous ways to do this (using Eigen, KDL, etc) - but it is also possible with only tf2 APIs:
+
+```cpp
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+
+tf2::Quaternion quat;
+quat.setEuler(yaw, pitch, roll);
+
+geometry_msgs::msg::TransformStamped transform;
+transform.transform.rotation = tf2::toMsg(quat);
+// Probably also fill in transform.header and transform.transform.translation
+
+// Can now use the transform with tf2::doTransform()
+```
+
 ## Getting Yaw Angle from Quaternion
 
-```
+```cpp
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <tf2/utils.hpp>
 
