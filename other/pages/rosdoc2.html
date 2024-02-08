@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/icon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
     
     
       
@@ -1025,6 +1025,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Rosdoc2
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="rosdoc2.html" class="md-nav__link md-nav__link--active">
         
   
@@ -1034,6 +1045,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linking-to-other-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linking to Other Packages
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1067,6 +1106,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linking-to-other-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linking to Other Packages
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1086,6 +1142,23 @@
 <h1 id="rosdoc2">rosdoc2</h1>
 <p>Documentation for ROS 2 packages can be built with
 <a href="https://github.com/ros-infrastructure/rosdoc2">rosdoc2</a>.</p>
+<p>When a <code>doc</code> job is configured in the <code>rosdistro</code>, the resulting
+documentation is uploaded to <code>docs.ros.org</code>.
+The design document for
+<a href="http://design.ros2.org/articles/per_package_documentation.html">per package documentation</a>
+lays out the directory structure.</p>
+<h2 id="linking-to-other-packages">Linking to Other Packages</h2>
+<p>This is a dirty hack, but appears to be the only way to have the table of contents
+link to another package's documentation without hard-coding the distro. The trailing
+<code>http://</code> changes how Sphinx processes the link:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   <span class="nc">:maxdepth:</span> 2
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   other_package &lt;../other_package/index.html#http://&gt;
+</span></code></pre></div>
+<p>An example of this can be seen in the documentation for
+<a href="http://docs.ros.org/en/rolling/p/image_pipeline/">image_pipeline</a>, where we want
+to link to the documentation for each of the packages within the metapackage.</p>
 
 
 
@@ -1171,7 +1244,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
