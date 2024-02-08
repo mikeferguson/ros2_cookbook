@@ -1,7 +1,7 @@
 site_name: ROS 2 Cookbook
 site_url: https://github.com/mikeferguson/ros2_cookbook
 site_author: Michael Ferguson
-site_description: Code snippets for ROS2
+site_description: Code snippets for ROS 2
 
 repo_name: mikeferguson/ros2_cookbook
 repo_url: https://github.com/mikeferguson/ros2_cookbook

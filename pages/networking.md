@@ -1,6 +1,6 @@
 # Networking
 
-ROS2 uses DDS for message transport.
+ROS 2 uses DDS for message transport.
 
 Set the environment variable RMW_IMPLEMENTATION to select a DDS implementation
 (RMW = robotic middleware). For instance:
@@ -17,7 +17,7 @@ ros2 doctor --report | grep middleware
 
 ## DDS Discovery
 
-There is no _rosmaster_ like in ROS1. Node discovery is peer-to-peer with nodes
+There is no _rosmaster_ like in ROS 1. Node discovery is peer-to-peer with nodes
 announcing their topics on startup and periodically after that. By default, any
 machines on the same network will see each other if they have the same
 ROS_DOMAIN_ID.

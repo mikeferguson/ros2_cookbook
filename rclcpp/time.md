@@ -1,12 +1,12 @@
 # rclcpp: Time
 
 The _rclcpp::Time_ and _rclcpp::Duration_ are a significant departure from
-their ROS1 equivalents, but are more closely related to
+their ROS 1 equivalents, but are more closely related to
 [std::chrono](https://en.cppreference.com/w/cpp/chrono). For an in-depth
 discussion comparing with std::chrono, see this discussion on
 [ROS Discourse](https://discourse.ros.org/t/ros-2-time-vs-std-chrono/6293).
 
-When porting certain ROS1 libraries, there may be significant usage of
+When porting certain ROS 1 libraries, there may be significant usage of
 timestamps as floating-point seconds. To get floating point seconds from
 an _rclcpp::Time_:
 
@@ -30,7 +30,7 @@ rclcpp::Duration d = rclcpp::Duration::from_seconds(1.0);
 double seconds = d.seconds();
 ```
 
-Unlike ROS1, sleeping does NOT occur from a Duration instance:
+Unlike ROS 1, sleeping does NOT occur from a Duration instance:
 
 ```cpp
 rclcpp::sleep_for(std::chrono::milliseconds(50));
