@@ -91,7 +91,9 @@ There are numerous ways to do this (using Eigen, KDL, etc) - but it is also poss
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
 tf2::Quaternion quat;
-quat.setEuler(yaw, pitch, roll);
+// While the documentation for tf2 orders the names of these as yaw, pitch, roll,
+// it specifies that yaw = rotation about Y, which is not what most of us expect
+quat.setEuler(pitch, roll, yaw);
 
 geometry_msgs::msg::TransformStamped transform;
 transform.transform.rotation = tf2::toMsg(quat);
