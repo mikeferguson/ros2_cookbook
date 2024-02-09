@@ -68,7 +68,7 @@ tf_buffer->transform(in, out, "target_frame", tf2::durationFromSec(1.0));
 
 ## Get Latest Transform
 
-A common work flow is to get the "latest" transform. In ROS2, this can be
+A common work flow is to get the "latest" transform. In ROS 2, this can be
 accomplished using _tf2::TimePointZero_, but requires using _lookupTransform_
 and then calling _doTransform_ (which is basically what _transform_ does
 internally):

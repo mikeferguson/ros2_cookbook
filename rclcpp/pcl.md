@@ -9,9 +9,9 @@ fields in a single giant data store. This allows the PointCloud2 message to
 work with any type of cloud (for instance, XYZ points only, XYZRGB, or even
 XYZI), but adds a bit of complexity in accessing the data in the cloud.
 
-In ROS1, there was a simpler PointCloud message, but this has been
+In ROS 1, there was a simpler PointCloud message, but this has been
 [deprecated](https://github.com/ros2/common_interfaces/issues/105) and will
-be removed in ROS2-G.
+be removed in ROS 2 Galactic.
 
 ## Using the PointCloud2Iterator
 
@@ -64,9 +64,9 @@ For a number of operations, you might want to convert to a pcl::PointCloud
 in order to use the extensive API of the
 [Point Cloud Library](https://pointclouds.org).
 
-In ROS1, the pcl_ros package allowed you to write a subscriber whose callback
+In ROS 1, the pcl_ros package allowed you to write a subscriber whose callback
 took a pcl::PointCloud directly, however this package has not yet been
-ported to ROS2. Regardless, it is pretty straight forward to do the conversion
+ported to ROS 2. Regardless, it is pretty straight forward to do the conversion
 yourself with the pcl_conversions package:
 
 ```cpp

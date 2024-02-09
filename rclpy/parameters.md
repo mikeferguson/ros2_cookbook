@@ -27,7 +27,7 @@ node.declare_parameters(
 
 ## Dynamic Parameters
 
-In ROS2, all parameters can be dynamically updated through a ROS2 service
+In ROS 2, all parameters can be dynamically updated through a ROS 2 service
 (there is no need to define duplicate stuff as with dynamic reconfigure).
 
 ```python

@@ -56,7 +56,7 @@ p2 = buffer.transform(p1, 'target_frame')
 
 ## Transformations
 
-In ROS1, tf included the _transformations_ module. tf2 has no similar module.
+In ROS 1, tf included the _transformations_ module. tf2 has no similar module.
 It is recommended to use transforms3d Python package, which is available through
 apt on Ubuntu 22.04:
 
@@ -89,5 +89,5 @@ p.point.y = M[1, 0]
 p.point.z = M[2, 0]
 ```
 
-Additionally, in ROS2 Humble there is the [tf_transformations package](https://github.com/DLu/tf_transformations)
+Additionally, in ROS 2 Humble there is the [tf_transformations package](https://github.com/DLu/tf_transformations)
 which should make it as easy as changing your imports from tf.transformations to tf_transformations.

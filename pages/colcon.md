@@ -11,7 +11,7 @@ alias test2="colcon test --event-handlers console_direct+"
 
 ## Build
 
-_colcon_ is used to build ROS2 packages in a workspace.
+_colcon_ is used to build ROS 2 packages in a workspace.
 
 Build all packages:
 
