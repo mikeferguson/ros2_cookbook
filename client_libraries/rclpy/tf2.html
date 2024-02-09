@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Code snippets for ROS2">
+        <meta name="description" content="Code snippets for ROS 2">
       
       
         <meta name="author" content="Michael Ferguson">
@@ -1254,7 +1254,7 @@ data type in <em>geometry_msgs</em>:</p>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">p2</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="s1">&#39;target_frame&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="transformations">Transformations</h2>
-<p>In ROS1, tf included the <em>transformations</em> module. tf2 has no similar module.
+<p>In ROS 1, tf included the <em>transformations</em> module. tf2 has no similar module.
 It is recommended to use transforms3d Python package, which is available through
 apt on Ubuntu 22.04:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo apt-get install python3-transforms3d
@@ -1278,7 +1278,7 @@ apt on Ubuntu 22.04:</p>
 </span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="n">p</span><span class="o">.</span><span class="n">point</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 </span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="n">p</span><span class="o">.</span><span class="n">point</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 </span></code></pre></div>
-<p>Additionally, in ROS2 Humble there is the <a href="https://github.com/DLu/tf_transformations">tf_transformations package</a>
+<p>Additionally, in ROS 2 Humble there is the <a href="https://github.com/DLu/tf_transformations">tf_transformations package</a>
 which should make it as easy as changing your imports from tf.transformations to tf_transformations.</p>
 
 

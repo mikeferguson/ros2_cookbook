@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Code snippets for ROS2">
+        <meta name="description" content="Code snippets for ROS 2">
       
       
         <meta name="author" content="Michael Ferguson">
@@ -1244,7 +1244,7 @@
 
 
 <h1 id="networking">Networking</h1>
-<p>ROS2 uses DDS for message transport.</p>
+<p>ROS 2 uses DDS for message transport.</p>
 <p>Set the environment variable RMW_IMPLEMENTATION to select a DDS implementation
 (RMW = robotic middleware). For instance:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
@@ -1253,7 +1253,7 @@
 <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ros2 doctor --report | grep middleware
 </span></code></pre></div>
 <h2 id="dds-discovery">DDS Discovery</h2>
-<p>There is no <em>rosmaster</em> like in ROS1. Node discovery is peer-to-peer with nodes
+<p>There is no <em>rosmaster</em> like in ROS 1. Node discovery is peer-to-peer with nodes
 announcing their topics on startup and periodically after that. By default, any
 machines on the same network will see each other if they have the same
 ROS_DOMAIN_ID.</p>

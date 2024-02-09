@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Code snippets for ROS2">
+        <meta name="description" content="Code snippets for ROS 2">
       
       
         <meta name="author" content="Michael Ferguson">
@@ -1250,12 +1250,12 @@
 
 
 <h1 id="cmake">CMake</h1>
-<p>While you don't need to know everything about CMake to use ROS2, knowing a bit
+<p>While you don't need to know everything about CMake to use ROS 2, knowing a bit
 will really be helpful. You might be interested in the
 <a href="https://cmake.org/cmake/help/latest/guide/tutorial/index.html">CMake tutorial</a>
 which explains the basics of CMake.</p>
 <h2 id="ament">Ament</h2>
-<p>Ament is a set of CMake modules specifically designed for ROS2 with the intent
+<p>Ament is a set of CMake modules specifically designed for ROS 2 with the intent
 of making CMake easier to use. See also the
 <a href="https://index.ros.org/doc/ros2/Tutorials/Ament-CMake-Documentation/">Ament CMake</a>
 documentation.</p>
@@ -1324,7 +1324,7 @@ documentation.</p>
 </span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="nb">ament_package</span><span class="p">()</span>
 </span></code></pre></div>
 <h2 id="linting-configuration">Linting Configuration</h2>
-<p>I prefer a more ROS1-style code style. To allow braces to be on their
+<p>I prefer a more ROS 1-style code style. To allow braces to be on their
 own lines:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">if</span><span class="p">(</span><span class="s">BUILD_TESTING</span><span class="p">)</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nb">find_package</span><span class="p">(</span><span class="s">ament_cmake_cpplint</span><span class="p">)</span>
@@ -1342,9 +1342,9 @@ own lines:</p>
 <h2 id="depending-on-messages-in-same-package">Depending on Messages in Same Package</h2>
 <p>It is generally best practice to put messages in separate packages, but sometimes,
 especially for drivers, you want the messages in the same package.</p>
-<p>The following example worked in earlier versions of ROS2 - but the syntax has changed
-See the <a href="https://docs.ros.org/en/rolling/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.html#link-against-the-interface">Implementing custom interfaces tutorial</a> for newer ROS2 distributions.</p>
-<div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c"># Note: this WILL NOT work in ROS2 Humble or later</span>
+<p>The following example worked in earlier versions of ROS 2 - but the syntax has changed
+See the <a href="https://docs.ros.org/en/rolling/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.html#link-against-the-interface">Implementing custom interfaces tutorial</a> for newer ROS 2 distributions.</p>
+<div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c"># Note: this WILL NOT work in ROS 2 Humble or later</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">find_package</span><span class="p">(</span><span class="s">rosidl_default_generators</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c"># Generate some messages</span>
@@ -1358,7 +1358,7 @@ See the <a href="https://docs.ros.org/en/rolling/Tutorials/Beginner-Client-Libra
 </span></code></pre></div>
 <h2 id="removing-boost-from-pluginlib">Removing Boost from Pluginlib</h2>
 <p>Pluginlib supports both boost::shared_ptrs and std::shared_ptrs by default,
-if you want to avoid depending on Boost in your shiny new ROS2 library, you
+if you want to avoid depending on Boost in your shiny new ROS 2 library, you
 need to specifically tell pluginlib not to include the Boost versions:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">target_compile_definitions</span><span class="p">(</span><span class="s">your_library</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s2">&quot;PLUGINLIB__DISABLE_BOOST_FUNCTIONS&quot;</span><span class="p">)</span>
 </span></code></pre></div>

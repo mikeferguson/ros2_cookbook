@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Code snippets for ROS2">
+        <meta name="description" content="Code snippets for ROS 2">
       
       
         <meta name="author" content="Michael Ferguson">
@@ -1305,7 +1305,7 @@ transform to be available up to that amount of time:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">tf_buffer</span><span class="o">-&gt;</span><span class="n">transform</span><span class="p">(</span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;target_frame&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">tf2</span><span class="o">::</span><span class="n">durationFromSec</span><span class="p">(</span><span class="mf">1.0</span><span class="p">));</span>
 </span></code></pre></div>
 <h2 id="get-latest-transform">Get Latest Transform</h2>
-<p>A common work flow is to get the "latest" transform. In ROS2, this can be
+<p>A common work flow is to get the "latest" transform. In ROS 2, this can be
 accomplished using <em>tf2::TimePointZero</em>, but requires using <em>lookupTransform</em>
 and then calling <em>doTransform</em> (which is basically what <em>transform</em> does
 internally):</p>

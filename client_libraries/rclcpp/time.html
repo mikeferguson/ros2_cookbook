@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Code snippets for ROS2">
+        <meta name="description" content="Code snippets for ROS 2">
       
       
         <meta name="author" content="Michael Ferguson">
@@ -1145,11 +1145,11 @@
 
 <h1 id="rclcpp-time">rclcpp: Time</h1>
 <p>The <em>rclcpp::Time</em> and <em>rclcpp::Duration</em> are a significant departure from
-their ROS1 equivalents, but are more closely related to
+their ROS 1 equivalents, but are more closely related to
 <a href="https://en.cppreference.com/w/cpp/chrono">std::chrono</a>. For an in-depth
 discussion comparing with std::chrono, see this discussion on
 <a href="https://discourse.ros.org/t/ros-2-time-vs-std-chrono/6293">ROS Discourse</a>.</p>
-<p>When porting certain ROS1 libraries, there may be significant usage of
+<p>When porting certain ROS 1 libraries, there may be significant usage of
 timestamps as floating-point seconds. To get floating point seconds from
 an _rclcpp::Time_:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// node is instance of rclcpp::Node</span>
@@ -1164,7 +1164,7 @@ so you first need to convert to nanoseconds:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">rclcpp</span><span class="o">::</span><span class="n">Duration</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Duration</span><span class="o">::</span><span class="n">from_seconds</span><span class="p">(</span><span class="mf">1.0</span><span class="p">);</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">seconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">seconds</span><span class="p">();</span>
 </span></code></pre></div>
-<p>Unlike ROS1, sleeping does NOT occur from a Duration instance:</p>
+<p>Unlike ROS 1, sleeping does NOT occur from a Duration instance:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">rclcpp</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="p">(</span><span class="mi">50</span><span class="p">));</span>
 </span></code></pre></div>
 <h2 id="api-documentation-links">API Documentation Links</h2>
