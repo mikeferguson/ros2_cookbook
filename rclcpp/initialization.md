@@ -1,5 +1,6 @@
 # rclcpp: Initialization
 
+## shared_from_this Cannot Be Used in Constructor
 Sometime, you need to initialize some components outside of the constructor of your node.
 For example, you may want to initialize an object by passing a shared pointer to the node to it.
 This is not possible in the constructor, because the node is not fully initialized yet.
@@ -38,4 +39,19 @@ InitializedComponent::get_node_base_interface() const
 {
   return this->node_->get_node_base_interface();
 }
+```
+
+## Overriding Default Parameters
+This is a pattern I find especially helpful when writing tests, where I want to create
+several tests with different parameters but would rather not maintain separate YAML
+or launch files with parameters:
+```cpp
+rclcpp::NodeOptions options;
+options.parameter_overrides(
+  {
+    {"my_namespace.my_parameter", 5.2},
+    {"another_parameter", "new value"},
+  }
+);
+auto node = std::make_shared<rclcpp::Node>("node_name", options);
 ```
