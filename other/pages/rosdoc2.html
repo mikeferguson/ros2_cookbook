@@ -1071,6 +1071,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#documenting-metapackages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documenting Metapackages
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1122,6 +1131,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#documenting-metapackages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documenting Metapackages
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1160,6 +1178,46 @@ link to another package's documentation without hard-coding the distro. The trai
 <p>An example of this can be seen in the documentation for
 <a href="http://docs.ros.org/en/rolling/p/image_pipeline/">image_pipeline</a>, where we want
 to link to the documentation for each of the packages within the metapackage.</p>
+<h2 id="documenting-metapackages">Documenting Metapackages</h2>
+<p>A metapackage is one that contains no code and exists basically to bundle up a set of
+dependencies. For instance <code>image_pipeline</code> is a repository containing several packages
+for image processing - and the <code>image_pipeline</code> metapackage depends on every package
+in the repository to make it easier to install with <code>apt install ros-&lt;distro&gt;-image-pipeline</code>
+rather than specifying each package individually. This does lead to an issue with
+<code>rosdoc2</code>, which will fail if there is no code to document. If you want to add
+tutorials or documentation to a metapackage, you need to use a <code>rosdoc2.yaml</code> file
+to properly build your documentation (which we assume is located in the <code>doc</code>
+folder:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;rosdoc2</span><span class="nv"> </span><span class="s">config&#39;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nn">---</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">settings</span><span class="p">:</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="c1"># Not generating any documentation of code</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nt">generate_package_index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nt">always_run_doxygen</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">enable_breathe</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">enable_exhale</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="nt">always_run_sphinx_apidoc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="c1"># Lie to rosdoc2, claim to be a python package</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nt">override_build_type</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ament_python&#39;</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="c1"># Lie to rosdoc2 again, say your source is in doc folder</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="nt">python_source</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;doc&#39;</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="nt">builders</span><span class="p">:</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">   </span><span class="c1"># Configure Sphinx with the location of the docs:</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">sphinx</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="nt">        name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;image_pipeline&#39;</span><span class="p p-Indicator">,</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="nt">        sphinx_sourcedir</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;doc&#39;</span><span class="p p-Indicator">,</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="nt">        output_dir</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="p p-Indicator">}</span>
+</span></code></pre></div>
+<p>Don't forget to add your yaml file to the <code>package.xml</code>:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;export&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&lt;rosdoc2&gt;</span>rosdoc2.yaml<span class="nt">&lt;/rosdoc2&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">&lt;/export&gt;</span>
+</span></code></pre></div>
 
 
 
