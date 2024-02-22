@@ -30,7 +30,7 @@ broadcaster->sendTransform(transform);
 rclcpp::Node node("name_of_node");
 
 auto tf_buffer = std::make_shared<tf2_ros::Buffer>(node.get_clock());
-auto tf_listener = std::make_shared<tf2_ros::TransformListener>(tf_buffer);
+auto tf_listener = std::make_shared<tf2_ros::TransformListener>(*tf_buffer);
 ```
 
 ## Applying Transforms
