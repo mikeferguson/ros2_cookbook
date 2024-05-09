@@ -8,19 +8,19 @@ which explains the basics of CMake.
 ## Ament
 
 Ament is a set of CMake modules specifically designed for ROS 2 with the intent
-of making CMake easier to use. See also the
-[Ament CMake](https://index.ros.org/doc/ros2/Tutorials/Ament-CMake-Documentation/)
+of making CMake easier to use. See the
+[Ament CMake](https://docs.ros.org/en/rolling/How-To-Guides/Ament-CMake-Documentation.html)
 documentation.
 
 The basic structure of an ament package:
 
 ```cmake
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.8)
 project(my_package_name)
 
-# Default to C++14
+# Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -54,7 +54,8 @@ install(
 )
 
 # Install our node and library
-install(TARGETS my_node my_library
+install(
+  TARGETS my_node my_library
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION lib/${PACKAGE_NAME}
