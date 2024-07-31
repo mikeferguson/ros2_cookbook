@@ -25,7 +25,7 @@ class MyNode(Node):
         self.get_logger().info("Recieved: %s" % msg.data)
         self.publisher.publish(msg)
 
-if __name___ == "__main__":
+if __name__ == "__main__":
     rclpy.init()
     my_node = MyNode()
     rclpy.spin(my_node)
