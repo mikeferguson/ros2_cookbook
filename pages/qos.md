@@ -1,5 +1,8 @@
 # QoS (Quality of Service)
 
+A full description of the available QoS settings, and compatability of different settings can be found
+in the [ROS 2 Documentation](https://docs.ros.org/en/rolling/Concepts/Intermediate/About-Quality-of-Service-Settings.html).
+
 ## Recommended Practices
 
  * [REP-2003](https://ros.org/reps/rep-2003.html) defines recommended practices for maps and sensor drivers.
@@ -37,11 +40,15 @@ node_name:
           history: keep_last
 ```
 
-NOTE: while some documentation uses `history_depth`, the actual parameter needs to just be `depth` in order to work.
+> [!NOTE]
+> While some documentation uses `history_depth`, the actual parameter needs to just be `depth` in order to work. 
 
 The same workflow works for subscribers, you just use ``rclcpp::SubscriptionOptions`` instance and change ``publisher`` to ``subscription`` in the YAML file.
 
 ## Magic Numbers
+
+> [!NOTE]
+> This is fixed in later releases, and QoS profile will show "Infinite"
 
 If you perform `ros2 topic info -v /some/topic` and you examine the QoS settings, you may note that several fields are set to the magic number 2147483651294967295 (or 2,147,483,651,294,967,295). e.g. 
 
