@@ -1179,6 +1179,8 @@
 
 
 <h1 id="qos-quality-of-service">QoS (Quality of Service)</h1>
+<p>A full description of the available QoS settings, and compatability of different settings can be found
+in the <a href="https://docs.ros.org/en/rolling/Concepts/Intermediate/About-Quality-of-Service-Settings.html">ROS 2 Documentation</a>.</p>
 <h2 id="recommended-practices">Recommended Practices</h2>
 <ul>
 <li><a href="https://ros.org/reps/rep-2003.html">REP-2003</a> defines recommended practices for maps and sensor drivers.</li>
@@ -1208,9 +1210,16 @@ specifying <code>volatile</code> rather than <code>transient local</code>.</p>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">          </span><span class="nt">depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">          </span><span class="nt">history</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">keep_last</span>
 </span></code></pre></div>
-<p>NOTE: while some documentation uses <code>history_depth</code>, the actual parameter needs to just be <code>depth</code> in order to work.</p>
+<blockquote>
+<p>[!NOTE]
+While some documentation uses <code>history_depth</code>, the actual parameter needs to just be <code>depth</code> in order to work. </p>
+</blockquote>
 <p>The same workflow works for subscribers, you just use <code>rclcpp::SubscriptionOptions</code> instance and change <code>publisher</code> to <code>subscription</code> in the YAML file.</p>
 <h2 id="magic-numbers">Magic Numbers</h2>
+<blockquote>
+<p>[!NOTE]
+This is fixed in later releases, and QoS profile will show "Infinite"</p>
+</blockquote>
 <p>If you perform <code>ros2 topic info -v /some/topic</code> and you examine the QoS settings, you may note that several fields are set to the magic number 2147483651294967295 (or 2,147,483,651,294,967,295). e.g. </p>
 <div class="highlight"><pre><span></span><code>QoS profile:
     Reliability: RMW_QOS_POLICY_RELIABILITY_RELIABLE
