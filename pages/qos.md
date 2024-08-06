@@ -33,9 +33,11 @@ node_name:
       fully_resolved_topic_name:
         publisher:
           reliability: reliable
-          history_depth: 100
+          depth: 100
           history: keep_last
 ```
+
+NOTE: while some documentation uses `history_depth`, the actual parameter needs to just be `depth` in order to work.
 
 The same workflow works for subscribers, you just use ``rclcpp::SubscriptionOptions`` instance and change ``publisher`` to ``subscription`` in the YAML file.
 
