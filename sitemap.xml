@@ -2,142 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/index.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/literate-nav.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/index.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclcpp/index.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclcpp/initialization.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclcpp/logging.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclcpp/nodes.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclcpp/parameters.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclcpp/pcl.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclcpp/tf2.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclcpp/time.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclcpp/workarounds.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclpy/index.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclpy/nodes.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclpy/parameters.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclpy/tf2.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclpy/time.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/other/pages/index.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/other/pages/bag.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/other/pages/cmake.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/other/pages/colcon.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/other/pages/command_line.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/other/pages/launch.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/other/pages/networking.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/other/pages/packages.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/other/pages/qos.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/other/pages/rosdep.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/mikeferguson/ros2_cookbook/other/pages/rosdoc2.html</loc>
-         <lastmod>2024-08-06</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
