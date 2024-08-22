@@ -73,6 +73,10 @@ For an example of calling the set_parameters service, see
 In ros2, this is done through a service call. For example, to get the `robot_description` parameter published by `robot_state_publisher`:
 
 ```python
+from rcl_interfaces.srv import GetParameters
+
+import rclpy
+from rclpy.node import Node
 
 class GetParam(Node):
     def __init__(self):
@@ -91,6 +95,7 @@ class GetParam(Node):
         else:
             self.get_logger().error('Failed to call service')
             return None
+
 def main(args=None):
     rclpy.init(args=args)
     node = GetParam()
@@ -105,3 +110,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+```
