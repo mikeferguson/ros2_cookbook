@@ -13,4 +13,5 @@ used packages.
 ## Higher Level Packages
 
  * [MoveIt2](https://moveit.ros.org/)
+   * If encountering errors about OpenGL Context when running setup assistant, restart the computer. This is usually caused by mismatched versions of NVIDIA drivers.
  * [Navigation2](https://navigation.ros.org/)
