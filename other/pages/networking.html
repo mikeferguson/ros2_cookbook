@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/icon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -1000,6 +1000,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#cyclonedds-large-topics-fail-with-best-effort-subscribers" class="md-nav__link">
+    <span class="md-ellipsis">
+      CycloneDDS: Large Topics Fail with Best Effort Subscribers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cyclonedds-multiple-interfaces" class="md-nav__link">
     <span class="md-ellipsis">
       CycloneDDS: Multiple Interfaces
@@ -1186,6 +1195,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#cyclonedds-large-topics-fail-with-best-effort-subscribers" class="md-nav__link">
+    <span class="md-ellipsis">
+      CycloneDDS: Large Topics Fail with Best Effort Subscribers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cyclonedds-multiple-interfaces" class="md-nav__link">
     <span class="md-ellipsis">
       CycloneDDS: Multiple Interfaces
@@ -1271,6 +1289,11 @@ supported options can be found in the
 <a href="https://github.com/eclipse-cyclonedds/cyclonedds/blob/master/docs/manual/options.md">eclipse-cyclonedds repo</a>.
 See also the
 <a href="https://github.com/eclipse-cyclonedds/cyclonedds/blob/master/docs/manual/config.rst">Guide to Configuration</a>.</p>
+<h3 id="cyclonedds-large-topics-fail-with-best-effort-subscribers">CycloneDDS: Large Topics Fail with Best Effort Subscribers</h3>
+<p>Starting with ROS 2 Jazzy, I noticed an issue where best effort subscribers no longer
+transmitted data for large topics (point clouds and images). This was fixed by applying
+the buffer size changes noted
+<a href="https://docs.ros.org/en/jazzy/How-To-Guides/DDS-tuning.html#cyclone-dds-tuning">here</a>.</p>
 <h3 id="cyclonedds-multiple-interfaces">CycloneDDS: Multiple Interfaces</h3>
 <p>Cyclone currently only works with a single network interface. If you have multiple
 interfaces, specify which one to use in the NetworkInterfaceAddress:</p>
@@ -1422,7 +1445,7 @@ the network with a custom string:</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
