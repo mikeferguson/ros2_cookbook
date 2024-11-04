@@ -40,6 +40,13 @@ supported options can be found in the
 See also the
 [Guide to Configuration](https://github.com/eclipse-cyclonedds/cyclonedds/blob/master/docs/manual/config.rst).
 
+### CycloneDDS: Large Topics Fail with Best Effort Subscribers
+
+Starting with ROS 2 Jazzy, I noticed an issue where best effort subscribers no longer
+transmitted data for large topics (point clouds and images). This was fixed by applying
+the buffer size changes noted
+[here](https://docs.ros.org/en/jazzy/How-To-Guides/DDS-tuning.html#cyclone-dds-tuning).
+
 ### CycloneDDS: Multiple Interfaces
 
 Cyclone currently only works with a single network interface. If you have multiple
