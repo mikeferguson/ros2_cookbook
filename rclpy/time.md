@@ -1,20 +1,23 @@
 # rclpy: Time
 
 There are four separate ways that you may see time represented in ROS 2:
+
  * Plain ol' `int`: representing a number of nanoseconds.
  * `float`: representing the fractional number of seconds
  * [`rclpy.time.Time`](https://github.com/ros2/rclpy/blob/rolling/rclpy/rclpy/time.py) - the preferred Pythonic interface
  * [`builtin_interfaces/msg/Time.msg`](https://github.com/ros2/rcl_interfaces/blob/master/builtin_interfaces/msg/Time.msg): the message representation.
 
 Here's how you can convert them.
+
 | Converting this →<br>to this ↓ | int                            | float                                                                                              | rclpy                 | msg                       |
-|--------------------------------|--------------------------------|----------------------------------------------------------------------------------------------------|-----------------------|---------------------------|
+| ------------------------------ | ------------------------------ | -------------------------------------------------------------------------------------------------- | --------------------- | ------------------------- |
 | int                            | -                              | `int(t * 1e9)`                                                                                     | `t.nanoseconds`       | `t.sec * 1e9 + t.nanosec` |
 | float                          | `t / 1e9`                      | -                                                                                                  | `t.nanoseconds / 1e9` | `t.sec + t.nanosec / 1e9` |
 | rclpy                          | `Time(nanoseconds=t)`          | `nano, sec = math.modf(t)`<br>`Time(int(sec), int(nano * 1e9))`                                    | -                     | `Time.from_msg(t)`        |
 | msg                            | `Time(nanoseconds=t).to_msg()` | `nano, sec = math.modf(t)`<br>`builtin_interfaces.msg.Time(sec=int(sec), nanosec=int(nano * 1e9))` | `t.to_msg()`          | -                         |
 
 Important notes:
+
  * You cannot do comparisons/math between mixed types or messages
  * It is only mildly infuriating that `rclpy.time.Time` has the full word `nanoseconds` accessor and the message has `nanosec`.
 
