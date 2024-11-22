@@ -1181,21 +1181,60 @@
 
 
 <h1 id="rclpy-time">rclpy: Time</h1>
-<p>There are four separate ways that you may see time represented in ROS 2:
- * Plain ol' <code>int</code>: representing a number of nanoseconds.
- * <code>float</code>: representing the fractional number of seconds
- * <a href="https://github.com/ros2/rclpy/blob/rolling/rclpy/rclpy/time.py"><code>rclpy.time.Time</code></a> - the preferred Pythonic interface
- * <a href="https://github.com/ros2/rcl_interfaces/blob/master/builtin_interfaces/msg/Time.msg"><code>builtin_interfaces/msg/Time.msg</code></a>: the message representation.</p>
-<p>Here's how you can convert them.
-| Converting this →<br>to this ↓ | int                            | float                                                                                              | rclpy                 | msg                       |
-|--------------------------------|--------------------------------|----------------------------------------------------------------------------------------------------|-----------------------|---------------------------|
-| int                            | -                              | <code>int(t * 1e9)</code>                                                                                     | <code>t.nanoseconds</code>       | <code>t.sec * 1e9 + t.nanosec</code> |
-| float                          | <code>t / 1e9</code>                      | -                                                                                                  | <code>t.nanoseconds / 1e9</code> | <code>t.sec + t.nanosec / 1e9</code> |
-| rclpy                          | <code>Time(nanoseconds=t)</code>          | <code>nano, sec = math.modf(t)</code><br><code>Time(int(sec), int(nano * 1e9))</code>                                    | -                     | <code>Time.from_msg(t)</code>        |
-| msg                            | <code>Time(nanoseconds=t).to_msg()</code> | <code>nano, sec = math.modf(t)</code><br><code>builtin_interfaces.msg.Time(sec=int(sec), nanosec=int(nano * 1e9))</code> | <code>t.to_msg()</code>          | -                         |</p>
-<p>Important notes:
- * You cannot do comparisons/math between mixed types or messages
- * It is only mildly infuriating that <code>rclpy.time.Time</code> has the full word <code>nanoseconds</code> accessor and the message has <code>nanosec</code>.</p>
+<p>There are four separate ways that you may see time represented in ROS 2:</p>
+<ul>
+<li>Plain ol' <code>int</code>: representing a number of nanoseconds.</li>
+<li><code>float</code>: representing the fractional number of seconds</li>
+<li><a href="https://github.com/ros2/rclpy/blob/rolling/rclpy/rclpy/time.py"><code>rclpy.time.Time</code></a> - the preferred Pythonic interface</li>
+<li><a href="https://github.com/ros2/rcl_interfaces/blob/master/builtin_interfaces/msg/Time.msg"><code>builtin_interfaces/msg/Time.msg</code></a>: the message representation.</li>
+</ul>
+<p>Here's how you can convert them.</p>
+<table>
+<thead>
+<tr>
+<th>Converting this →<br>to this ↓</th>
+<th>int</th>
+<th>float</th>
+<th>rclpy</th>
+<th>msg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>-</td>
+<td><code>int(t * 1e9)</code></td>
+<td><code>t.nanoseconds</code></td>
+<td><code>t.sec * 1e9 + t.nanosec</code></td>
+</tr>
+<tr>
+<td>float</td>
+<td><code>t / 1e9</code></td>
+<td>-</td>
+<td><code>t.nanoseconds / 1e9</code></td>
+<td><code>t.sec + t.nanosec / 1e9</code></td>
+</tr>
+<tr>
+<td>rclpy</td>
+<td><code>Time(nanoseconds=t)</code></td>
+<td><code>nano, sec = math.modf(t)</code><br><code>Time(int(sec), int(nano * 1e9))</code></td>
+<td>-</td>
+<td><code>Time.from_msg(t)</code></td>
+</tr>
+<tr>
+<td>msg</td>
+<td><code>Time(nanoseconds=t).to_msg()</code></td>
+<td><code>nano, sec = math.modf(t)</code><br><code>builtin_interfaces.msg.Time(sec=int(sec), nanosec=int(nano * 1e9))</code></td>
+<td><code>t.to_msg()</code></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>Important notes:</p>
+<ul>
+<li>You cannot do comparisons/math between mixed types or messages</li>
+<li>It is only mildly infuriating that <code>rclpy.time.Time</code> has the full word <code>nanoseconds</code> accessor and the message has <code>nanosec</code>.</li>
+</ul>
 <h2 id="now">Now</h2>
 <p>To get the equivalent of rospy.Time.now(), you now need a ROS 2 node:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">rclpy</span>
