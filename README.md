@@ -21,6 +21,7 @@
    * [Loading Parameters From a File](pages/launch.md#loading-parameters-from-a-file)
    * [Including Python Launch Files](pages/launch.md#including-python-launch-files)
    * [Loading a URDF](pages/launch.md#loading-a-urdf)
+   * [Debugging a Node in GDB](pages/launch.md#debugging-a-node-in-gdb)
    * [Installing Launch Files](pages/launch.md#installing-launch-files)
  * [rosbag2](pages/bag.md)
    * [Common CLI Commands](pages/bag.md#common-command-line)
