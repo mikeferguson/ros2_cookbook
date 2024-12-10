@@ -89,7 +89,6 @@ Node(
 )
 ```
 
-
 ## Including Python Launch Files
 
 ```python
@@ -133,6 +132,39 @@ Node(
     executable='robot_state_publisher',
     parameters=[{'robot_description': urdf}],
 )
+```
+
+## Debugging a Node in GDB
+
+If you are using a computer with a graphical system, it's pretty
+easy to have gdb launch in a new terminal, by adding the following:
+
+```python
+Node(
+    # Configure the node as above
+    # Add a prefix so the node is started in GDB in a new xterm
+    prefix=['xterm -e gdb --args'],
+)
+```
+
+However, many robots lack a graphical system. In this case,
+you can launch GDB in a server configuration:
+
+```python
+Node(
+    # Configure the node as above
+    # Add a prefix so the node is started in a gdbserver
+    prefix=['gdbserver localhost:2345'],
+)
+```
+
+Then, in a separate terminal you can connect to the target, and start
+the node by running `continue`:
+
+```
+$> gdb
+(gdb) target remote localhost:2345
+(gdb) continue
 ```
 
 ## Installing Launch Files
