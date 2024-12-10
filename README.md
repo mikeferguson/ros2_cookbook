@@ -1,6 +1,6 @@
 # ROS2 Cookbook
 
- *[Getting Started](pages/getting_started.md)
+ * [Getting Started](pages/getting_started.md)
  * Client Libraries
    * rclcpp [API](http://docs.ros2.org/latest/api/rclcpp/)
      * [Logging](rclcpp/logging.md)
