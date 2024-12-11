@@ -45,6 +45,13 @@ node_name:
 
 The same workflow works for subscribers, you just use ``rclcpp::SubscriptionOptions`` instance and change ``publisher`` to ``subscription`` in the YAML file.
 
+When using `with_default_policies`, the `history`, `depth` and `reliability` can be changed. It is also possible
+to select other overriding options by passing an initializer list of `QosPolicyKind` to the regular constructor:
+
+```cpp
+pub_options.qos_overriding_options = rclcpp::QosOverridingOptions({rclcpp::QosPolicyKind::Reliability});
+```
+
 ## Magic Numbers
 
 > [!NOTE]
