@@ -1238,6 +1238,10 @@ specifying <code>volatile</code> rather than <code>transient local</code>.</p>
 While some documentation uses <code>history_depth</code>, the actual parameter needs to just be <code>depth</code> in order to work. </p>
 </blockquote>
 <p>The same workflow works for subscribers, you just use <code>rclcpp::SubscriptionOptions</code> instance and change <code>publisher</code> to <code>subscription</code> in the YAML file.</p>
+<p>When using <code>with_default_policies</code>, the <code>history</code>, <code>depth</code> and <code>reliability</code> can be changed. It is also possible
+to select other overriding options by passing an initializer list of <code>QosPolicyKind</code> to the regular constructor:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">pub_options</span><span class="p">.</span><span class="n">qos_overriding_options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">QosOverridingOptions</span><span class="p">({</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">QosPolicyKind</span><span class="o">::</span><span class="n">Reliability</span><span class="p">});</span>
+</span></code></pre></div>
 <h2 id="magic-numbers">Magic Numbers</h2>
 <blockquote>
 <p>[!NOTE]
