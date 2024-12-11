@@ -92,6 +92,17 @@ if(BUILD_TESTING)
 endif()
 ```
 
+## Safely Defaulting to Release Build
+
+This pattern appears in various places in ROS 2:
+
+```cmake
+if(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
+  message("${PROJECT_NAME}: Defaulting to Release build")
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+```
+
 ## Installing Python Scripts
 
 ```cmake
