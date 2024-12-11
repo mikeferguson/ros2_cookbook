@@ -32,7 +32,14 @@
    * [Clearpath Robotics has a great Network Troubleshooting Flow Chart](https://docs.clearpathrobotics.com/docs/ros/networking/network_troubleshooting) 
  * [Documenting with rosdoc2](pages/rosdoc2.md)
  * [CMake](pages/cmake.md)
- * [QoS](pages/qos.md)
+   * [ROS 1 Style Linting Configuration](pages/cmake.md#linting-configuration)
+   * [Safely Defaulting to Release Build](pages/cmake.md#safely-defaulting-to-release-build)
+   * [Installing Python Scripts](pages/cmake.md#installing-python-scripts)
+   * [Depending o Messages in Same Package](pages/cmake.md#depending-on-messages-in-same-package)
+   * [Removing Boost from Pluginlib](pages/cmake.md#removing-boost-from-pluginlib)
+ * [Quality of Service (QoS)](pages/qos.md)
+   * [REP-2003 Recommended Practices](pages/qos.md#recommended-practices)
+   * [QoS Overrides](pages/qos.md#overrides)
  * Command Line Tools
    * ```ros2 run <pkg> <node>```
    * ```ros2 node list```
