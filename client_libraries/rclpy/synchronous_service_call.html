@@ -12,13 +12,13 @@
         <meta name="author" content="Michael Ferguson">
       
       
-        <link rel="canonical" href="https://github.com/mikeferguson/ros2_cookbook/other/pages/index.html">
+        <link rel="canonical" href="https://github.com/mikeferguson/ros2_cookbook/client_libraries/rclpy/synchronous_service_call.html">
       
       
-        <link rel="prev" href="../../client_libraries/rclpy/time.html">
+        <link rel="prev" href="parameters.html">
       
       
-        <link rel="next" href="bag.html">
+        <link rel="next" href="tf2.html">
       
       
       <link rel="icon" href="../../assets/icon.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Other - ROS 2 Cookbook</title>
+        <title>Synchronous_service_call - ROS 2 Cookbook</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#other" class="md-skip">
+        <a href="#rclpy-synchronous-service-call" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Other
+              Synchronous_service_call
             
           </span>
         </div>
@@ -216,9 +216,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../client_libraries/index.html" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../index.html" class="md-tabs__link">
         
   
     
@@ -233,11 +235,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="index.html" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../other/pages/index.html" class="md-tabs__link">
         
   
     
@@ -303,6 +303,8 @@
       
   
   
+    
+  
   
   
     
@@ -319,19 +321,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../client_libraries/index.html" class="md-nav__link ">
+            <a href="../index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -342,13 +347,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Client Libraries
@@ -395,7 +400,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../client_libraries/rclcpp/index.html" class="md-nav__link ">
+            <a href="../rclcpp/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -426,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client_libraries/rclcpp/initialization.html" class="md-nav__link">
+      <a href="../rclcpp/initialization.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -447,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client_libraries/rclcpp/logging.html" class="md-nav__link">
+      <a href="../rclcpp/logging.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -468,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client_libraries/rclcpp/nodes.html" class="md-nav__link">
+      <a href="../rclcpp/nodes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -489,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client_libraries/rclcpp/parameters.html" class="md-nav__link">
+      <a href="../rclcpp/parameters.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -510,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client_libraries/rclcpp/pcl.html" class="md-nav__link">
+      <a href="../rclcpp/pcl.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client_libraries/rclcpp/tf2.html" class="md-nav__link">
+      <a href="../rclcpp/tf2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -552,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client_libraries/rclcpp/time.html" class="md-nav__link">
+      <a href="../rclcpp/time.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client_libraries/rclcpp/workarounds.html" class="md-nav__link">
+      <a href="../rclcpp/workarounds.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -599,8 +604,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -620,16 +627,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../client_libraries/rclpy/index.html" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -646,7 +653,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -660,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client_libraries/rclpy/nodes.html" class="md-nav__link">
+      <a href="nodes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -681,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client_libraries/rclpy/parameters.html" class="md-nav__link">
+      <a href="parameters.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -699,10 +706,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../client_libraries/rclpy/synchronous_service_call.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="synchronous_service_call.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -711,6 +727,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -723,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client_libraries/rclpy/tf2.html" class="md-nav__link">
+      <a href="tf2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client_libraries/rclpy/time.html" class="md-nav__link">
+      <a href="time.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,10 +794,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -809,22 +824,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link md-nav__link--active">
+            <a href="../../other/pages/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -835,13 +847,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Other
@@ -855,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="bag.html" class="md-nav__link">
+      <a href="../../other/pages/bag.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -876,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cmake.html" class="md-nav__link">
+      <a href="../../other/pages/cmake.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -897,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="colcon.html" class="md-nav__link">
+      <a href="../../other/pages/colcon.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -918,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="command_line.html" class="md-nav__link">
+      <a href="../../other/pages/command_line.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -939,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting_started.html" class="md-nav__link">
+      <a href="../../other/pages/getting_started.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -960,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="launch.html" class="md-nav__link">
+      <a href="../../other/pages/launch.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -981,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="networking.html" class="md-nav__link">
+      <a href="../../other/pages/networking.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1002,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="packages.html" class="md-nav__link">
+      <a href="../../other/pages/packages.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1023,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qos.html" class="md-nav__link">
+      <a href="../../other/pages/qos.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1044,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rosdep.html" class="md-nav__link">
+      <a href="../../other/pages/rosdep.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1065,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rosdoc2.html" class="md-nav__link">
+      <a href="../../other/pages/rosdoc2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1106,104 +1118,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#rosbag2" class="md-nav__link">
-    <span class="md-ellipsis">
-      rosbag2
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cmake" class="md-nav__link">
-    <span class="md-ellipsis">
-      CMake
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#colcon" class="md-nav__link">
-    <span class="md-ellipsis">
-      colcon
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#command-line-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Command Line Tools
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ros2launch" class="md-nav__link">
-    <span class="md-ellipsis">
-      ros2launch
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#networking-dds-cyclonedds" class="md-nav__link">
-    <span class="md-ellipsis">
-      Networking (DDS &amp; CycloneDDS)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#package-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Package Documentation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#qos-quality-of-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      QoS (Quality of Service)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#documenting-with-rosdoc2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Documenting with rosdoc2
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rosdep" class="md-nav__link">
-    <span class="md-ellipsis">
-      rosdep
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1220,19 +1134,51 @@
   
 
 
-<div class="centered-content">
-<h1 id="other">Other</h1>
-<h2 id="rosbag2"><a href="bag.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 19H2v2h20zM4 15c0 .5.2 1 .6 1.4s.9.6 1.4.6V6c-.5 0-1 .2-1.4.6S4 7.5 4 8zm9.5-9h-3c0-.4.1-.8.4-1.1s.6-.4 1.1-.4c.4 0 .8.1 1.1.4.2.3.4.7.4 1.1M7 6v11h10V6h-2q0-1.2-.9-2.1C13.2 3 12.8 3 12 3q-1.2 0-2.1.9T9 6zm11 11c.5 0 1-.2 1.4-.6s.6-.9.6-1.4V8c0-.5-.2-1-.6-1.4S18.5 6 18 6z"/></svg></span> rosbag2</a></h2>
-<h2 id="cmake"><a href="cmake.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.769.066.067 23.206l12.76-10.843zm11.438 23.868L7.471 17.587 0 23.934zm.793-.198L12.298.463l1.719 19.24zM12.893 12.959l-5.025 4.298 5.62 2.248z"/></svg></span> CMake</a></h2>
-<h2 id="colcon"><a href="colcon.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12zm-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5zM16 20v2H4a2 2 0 0 1-2-2V7h2v13z"/></svg></span> colcon</a></h2>
-<h2 id="command-line-tools"><a href="command_line.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19v-3h8v3zm-4.5-6L2.47 7h4.24l4.96 4.95c.58.59.58 1.55 0 2.12L6.74 19H2.5z"/></svg></span> Command Line Tools</a></h2>
-<h2 id="ros2launch"><a href="launch.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39S16.66.269 11 5.93c-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.55.56 1.37.74 2.12.46A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61m-7.07 7.07c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"/></svg></span> ros2launch</a></h2>
-<h2 id="networking-dds-cyclonedds"><a href="networking.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 64h128v64H256zM240 0c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h48v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96v32H80c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h160c26.5 0 48-21.5 48-48v-96c0-26.5-21.5-48-48-48h-48v-32h256v32h-48c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h160c26.5 0 48-21.5 48-48v-96c0-26.5-21.5-48-48-48h-48v-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352v-32h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM96 448v-64h128v64zm320-64h128v64H416z"/></svg></span> Networking (DDS &amp; CycloneDDS)</a></h2>
-<h2 id="package-documentation"><a href="packages.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 10.96a.985.985 0 0 1-.37-1.37L3.13 7c.11-.2.28-.34.47-.42l7.83-4.4c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.19.1.35.26.44.46l1.45 2.52c.28.48.11 1.09-.36 1.36l-1 .58v4.96c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-5.54c-.3.17-.68.18-1 0m10-6.81v6.7l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-3.22l-5 2.9c-.33.18-.7.17-1 .01v3.69zm-5.15-2.55 6.28-3.63-.58-1.01-6.28 3.63z"/></svg></span> Package Documentation</a></h2>
-<h2 id="qos-quality-of-service"><a href="qos.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5a2 2 0 0 1 2 2q0 .36-.12.69C17.95 8.5 21 11.91 21 16H3c0-4.09 3.05-7.5 7.12-8.31Q10 7.36 10 7a2 2 0 0 1 2-2m10 14H2v-2h20zM12 9.5c-3.11 0-5.75 1.89-6.66 4.5h13.32c-.91-2.61-3.55-4.5-6.66-4.5"/></svg></span> QoS (Quality of Service)</a></h2>
-<h2 id="documenting-with-rosdoc2"><a href="rosdoc2.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5zM6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m9 16v-2H6v2zm3-4v-2H6v2z"/></svg></span> Documenting with rosdoc2</a></h2>
-<h2 id="rosdep"><a href="rosdep.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.122.392a1.75 1.75 0 0 1 1.756 0l5.25 3.045c.54.313.872.89.872 1.514V7.25a.75.75 0 0 1-1.5 0V5.677L7.75 8.432v6.384a1 1 0 0 1-1.502.865L.872 12.563A1.75 1.75 0 0 1 0 11.049V4.951c0-.624.332-1.2.872-1.514ZM7.125 1.69a.25.25 0 0 0-.25 0l-4.63 2.685L7 7.133l4.755-2.758ZM1.5 11.049a.25.25 0 0 0 .125.216l4.625 2.683V8.432L1.5 5.677Zm11.672-.282L11.999 12h3.251a.75.75 0 0 1 0 1.5h-3.251l1.173 1.233a.75.75 0 1 1-1.087 1.034l-2.378-2.5a.75.75 0 0 1 0-1.034l2.378-2.5a.75.75 0 0 1 1.087 1.034"/></svg></span> rosdep</a></h2>
-</div>
+<h1 id="rclpy-synchronous-service-call">rclpy: Synchronous service call</h1>
+<p>For an in-depth discussion comparing synchronous and asynchronous service calls, see this <a href="https://docs.ros.org/en/humble/How-To-Guides/Sync-Vs-Async.html">How-to Guide</a>.</p>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">sys</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">from</span> <span class="nn">example_interfaces.srv</span> <span class="kn">import</span> <span class="n">AddTwoInts</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">import</span> <span class="nn">rclpy</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">class</span> <span class="nc">MinimalClientSync</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;minimal_client_sync&#39;</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">cli</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_client</span><span class="p">(</span><span class="n">AddTwoInts</span><span class="p">,</span> <span class="s1">&#39;add_two_ints&#39;</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">cli</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span><span class="n">timeout_sec</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;service not available, waiting again...&#39;</span><span class="p">)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">req</span> <span class="o">=</span> <span class="n">AddTwoInts</span><span class="o">.</span><span class="n">Request</span><span class="p">()</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="k">def</span> <span class="nf">send_request</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">req</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">req</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cli</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">req</span><span class="p">)</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        <span class="c1"># This only works because rclpy.spin() is called in a separate thread below.</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        <span class="c1"># Another configuration, like spinning later in main() or calling this method from a timer callback, would result in a deadlock.</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="n">minimal_client</span> <span class="o">=</span> <span class="n">MinimalClientSync</span><span class="p">()</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="n">spin_thread</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">minimal_client</span><span class="p">,))</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    <span class="n">spin_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">minimal_client</span><span class="o">.</span><span class="n">send_request</span><span class="p">()</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    <span class="n">minimal_client</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>        <span class="s1">&#39;Result of add_two_ints: for </span><span class="si">%d</span><span class="s1"> + </span><span class="si">%d</span><span class="s1"> = </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>        <span class="p">(</span><span class="n">minimal_client</span><span class="o">.</span><span class="n">req</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="n">minimal_client</span><span class="o">.</span><span class="n">req</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">sum</span><span class="p">))</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    <span class="n">minimal_client</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    <span class="n">main</span><span class="p">()</span>
+</span></code></pre></div>
 
 
 
@@ -1270,7 +1216,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../client_libraries/rclpy/time.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Time">
+          <a href="parameters.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Parameters">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1280,20 +1226,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Time
+                Parameters
               </div>
             </div>
           </a>
         
         
           
-          <a href="bag.html" class="md-footer__link md-footer__link--next" aria-label="Next: Bag">
+          <a href="tf2.html" class="md-footer__link md-footer__link--next" aria-label="Next: Tf2">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Bag
+                Tf2
               </div>
             </div>
             <div class="md-footer__button md-icon">
