@@ -15,6 +15,7 @@
      * [Parameters](rclpy/parameters.md)
      * [Time](rclpy/time.md)
      * [TF2](rclpy/tf2.md)
+     * [Synchronous service call](rclpy/synchronous_service_call.md)
  * [ros2launch](pages/launch.md)
    * [Python-Based Launch Files](pages/launch.md#python-based-launch-files)
    * [Making a Launch File Executable](pages/launch.md#making-a-launch-file-executable)
