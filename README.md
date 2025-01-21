@@ -30,7 +30,7 @@
    * [Converting Bags from ROS 1 to ROS 2](pages/bag.md#converting-bag-files-from-ros-1)
    * [Removing TF From a Bagfile](pages/bag.md#removing-tf-from-a-bagfile)
  * [Networking (DDS & CycloneDDS)](pages/networking.md)
-   * [Clearpath Robotics has a great Network Troubleshooting Flow Chart](https://docs.clearpathrobotics.com/docs/ros/networking/network_troubleshooting) 
+   * [Clearpath Robotics has a great Network Troubleshooting Flow Chart](https://docs.clearpathrobotics.com/docs/ros/networking/network_troubleshooting/troubleshooting_overview)
  * [Documenting with rosdoc2](pages/rosdoc2.md)
  * [CMake](pages/cmake.md)
    * [ROS 1 Style Linting Configuration](pages/cmake.md#linting-configuration)
