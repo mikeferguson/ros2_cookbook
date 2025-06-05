@@ -53,12 +53,13 @@
  * Packaging
    * [Setting bloom/git to always use ssh](https://answers.ros.org/question/234494/diagnosing-issues-with-bloom-github-two-factor-authentication/)
      * ```git config --global url.ssh://git@github.com/.insteadOf https://github.com/```
-   * ```rosdep install --from-paths src --ignore-src --rosdistro=humble -y```
+   * ```rosdep install --from-paths src --ignore-src --rosdistro=jazzy -y```
  * [Package Documentation](pages/packages.md)
  * Limitations / Bugs
    * [Cannot generate messages and call ament_python_install_package() in same package](https://github.com/ros2/rosidl_python/issues/141)
  * Status Pages
    * [Rolling Debian Build Status](http://repo.ros2.org/status_page/ros_rolling_default.html)
+   * [Kilted Debian Build Status](http://repo.ros2.org/status_page/ros_kilted_default.html)
    * [Jazzy Debian Build Status](http://repo.ros2.org/status_page/ros_jazzy_default.html)
    * [Humble Debian Build Status](http://repo.ros2.org/status_page/ros_humble_default.html)
 
