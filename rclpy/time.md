@@ -70,17 +70,36 @@ class MyNode(Node):
 
 Using Rate objects in ROS 2 is a bit more complex than in ROS 1. Due to implementation
 details, we need to spin() or the sleep() function will block. This is most easily
-accomplished using a thread:
+accomplished using a thread.
+
+**Do not** spin in a *daemon* thread: when the process exits, the daemon thread is
+forcibly terminated mid-execution, which surfaces as a spurious
+`terminate called without an active exception` / `[ros2run]: Aborted` after
+`rclpy.shutdown()`. Use a regular (non-daemon) thread and join it explicitly before
+shutting down:
 
 ```python
 import threading
 
-# Run spin in a thread, make thread daemon so we don't have to join it to exit
-thread = threading.Thread(target=rclpy.spin, args=(node, ), daemon=True)
+import rclpy
+from rclpy.node import Node
+
+rclpy.init()
+node = rclpy.create_node('rate_node')
+
+# Spin in a regular (non-daemon) thread so Rate.sleep() doesn't block.
+thread = threading.Thread(target=rclpy.spin, args=(node, ), daemon=False)
 thread.start()
 
 rate = node.create_rate(10)
 while rclpy.ok():
     print('This prints at 10hz')
     rate.sleep()
+
+# Shut down cleanly: stop the node first, then join the spin thread.
+# rclpy.shutdown() makes the in-flight rclpy.spin() return, so the join
+# terminates instead of leaking an aborted thread.
+node.destroy_node()
+rclpy.shutdown()
+thread.join()
 ```
