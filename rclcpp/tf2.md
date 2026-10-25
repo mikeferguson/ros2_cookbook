@@ -6,31 +6,30 @@ require a dependency on the _tf2_ros_ package.
 ## Broadcasting Transforms
 
 ```cpp
-#include <tf2_ros/transform_broadcaster.h>
-std::unique_ptr<tf2_ros::TransformBroadcaster> broadcaster;
+#include <tf2_ros/transform_broadcaster.hpp>
 
-broadcaster = std::make_unique<tf2_ros::TransformBroadcaster>(nodePtr);
+tf2_ros::TransformBroadcaster broadcaster{node};
 
 geometry_msgs::msg::TransformStamped transform;
-transform.header.stamp = node->now();
+transform.header.stamp = node.now();
 transform.header.frame_id = "odom";
 transform.child_frame_id = "base_link";
 
 // Fill in transform.transform.translation
 // Fill in transform.transform.rotation
 
-broadcaster->sendTransform(transform);
+broadcaster.sendTransform(transform);
 ```
 
 ## Listening for Transforms
 
 ```cpp
-#include "tf2_ros/transform_listener.h"
+#include <tf2_ros/transform_listener.hpp>
 
 rclcpp::Node node("name_of_node");
 
-auto tf_buffer = std::make_shared<tf2_ros::Buffer>(node.get_clock());
-auto tf_listener = std::make_shared<tf2_ros::TransformListener>(*tf_buffer);
+tf2_ros::Buffer tf_buffer{node.get_clock()};
+tf2_ros::TransformListener tf_listener{tf_buffer};
 ```
 
 ## Applying Transforms
@@ -41,14 +40,14 @@ below uses _geometry_msgs::msg::PointStamped_ - but this should work for any
 data type in _geometry_msgs_:
 
 ```cpp
-#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
-geometry_msg::msgs::PointStamped in, out;
+geometry_msgs::msg::PointStamped in, out;
 in.header.frame_id = "source_frame";
 
 try
 {
-  tf_buffer->transform(in, out, "target_frame");
+  tf_buffer.transform(in, out, "target_frame");
 }
 catch (const tf2::TransformException& ex)
 {
@@ -60,7 +59,7 @@ The _transform_ function can also take a timeout. It will then wait for the
 transform to be available up to that amount of time:
 
 ```cpp
-tf_buffer->transform(in, out, "target_frame", tf2::durationFromSec(1.0));
+tf_buffer.transform(in, out, "target_frame", tf2::durationFromSec(1.0));
 ```
 
 ## Get Latest Transform
@@ -74,7 +73,7 @@ internally):
 geometry_msgs::msg::PointStamped in, out;
 
 geometry_msgs::msg::TransformStamped transform =
-   tf_buffer->lookupTransform("target_frame",
+   tf_buffer.lookupTransform("target_frame",
                               in.header.frame_id,
                               tf2::TimePointZero);
 
